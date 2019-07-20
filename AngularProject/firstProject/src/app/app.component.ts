@@ -7,5 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'firstProject';
-  public name="Rahul";
+  public name = 'Data transfered by Parent to Child';
+  public message = "";
+  public date = new Date(); 
 }
