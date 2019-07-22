@@ -281,24 +281,12 @@
                         </li>
                       
                          
-                         <li class="nav-small-cap"><i class="mdi mdi-dots-horizontal"></i> <span class="hide-menu">Reports</span></li>
+                        <li class="nav-small-cap"><i class="mdi mdi-dots-horizontal"></i> <span class="hide-menu">Reports</span></li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-border-none"></i><span class="hide-menu">Reports</span></a>
-                             <ul aria-expanded="false" class="collapse first-level">
-                                
-                                <li class="sidebar-item"> <a class="has-arrow sidebar-link" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-playlist-plus"></i> <span class="hide-menu">subscriber Reports/Logs</span></a>
-                                    <ul aria-expanded="false" class="collapse second-level">
-                                        <li class="sidebar-item"><a href="<?=base_url('index.php/Subscriberlog/subscriberReport')?>" class="sidebar-link"><i class="mdi mdi-octagram"></i><span class="hide-menu"> Subscriber Reports</span></a></li>
-                                        <!-- <li class="sidebar-item"><a href="<?=base_url('index.php/Subscriberlog/registrationReport')?>" class="sidebar-link"><i class="mdi mdi-octagram"></i><span class="hide-menu"> Registration Report</span></a></li> -->
-                                       <!--  <li class="sidebar-item"><a href="<?=base_url('index.php/Subscriberlog/Accesslog')?>" class="sidebar-link"><i class="mdi mdi-octagram"></i><span class="hide-menu"> Access Logs</span></a></li> -->
-                                        <li class="sidebar-item"><a href="<?=base_url('index.php/Subscriberlog/sessionlogReport')?>" class="sidebar-link"><i class="mdi mdi-octagram"></i><span class="hide-menu"> Session Logs</span></a></li>
-                                         <!-- <li class="sidebar-item"><a href="<?=base_url('index.php/Subscriberlog/Ipmaclog')?>" class="sidebar-link"><i class="mdi mdi-octagram"></i><span class="hide-menu"> IP Mac Logs</span></a></li> -->
-                                        <!-- <li class="sidebar-item"><a href="<?=base_url('index.php/Subscriberlog/Planwisesubscriber')?>" class="sidebar-link"><i class="mdi mdi-octagram"></i><span class="hide-menu"> Planwise Subscriber</span></a></li> -->
-                                        <li class="sidebar-item"><a href="<?=base_url('index.php/Subscriberlog/Renewalreport')?>" class="sidebar-link"><i class="mdi mdi-octagram"></i><span class="hide-menu"> Renewal Report</span></a></li>
-                                       
-                                    </ul>
-                           
-                              
-                              </ul>
+                             <form>
+                                 <input type="text" name="Search" placeholder="Serach" class="form-control">
+                                 <input type="submit" value="Search"  class="btn btn-info">
+                             </form>
                         </li>
                        
                     </ul>

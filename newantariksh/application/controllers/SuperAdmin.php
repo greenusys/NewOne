@@ -6,5 +6,8 @@ class SuperAdmin extends CI_Controller {
 	{
 		$this->load->view('SuperAdmin/Template/header');
 		$this->load->view('SuperAdmin/Home/index');
+		$this->load->view('SuperAdmin/Template/setting_bar');
+		
+		
 	}
 }
