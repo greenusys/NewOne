@@ -27,6 +27,8 @@
     <title>Admin</title>
     <!-- Custom CSS -->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" >
+    
     <link href="<?=base_url('assets/libs/chartist/dist/chartist.min.css')?>" rel="stylesheet">
     <link href="<?=base_url('assets/extra-libs/c3/c3.min.css')?>" rel="stylesheet">
     <link href="<?=base_url('assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css')?>" rel="stylesheet" />
