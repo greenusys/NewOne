@@ -36,7 +36,7 @@
                                 <div class="col-md-12">
                                     <div class="d-flex no-block align-items-center">
                                         <div>
-                                            <i class="mdi mdi-emoticon font-20 text-muted"></i>
+                                            <i class="fas fa-users"></i>
                                             <span class="font-16 m-b-5">Total Admin: </span>
                                         </div>
                                         <div class="ml-auto">
@@ -60,7 +60,7 @@
                                 <div class="col-md-12">
                                     <div class="d-flex no-block align-items-center">
                                         <div>
-                                            <i class="mdi mdi-image font-20  text-muted"></i>
+                                            <i class="fas fa-building"></i>
                                             <span class="font-16 m-b-5">Total Companies: </span>
                                         </div>
                                         <div class="ml-auto">
@@ -84,7 +84,7 @@
                                 <div class="col-md-12">
                                     <div class="d-flex no-block align-items-center">
                                         <div>
-                                            <i class="mdi mdi-currency-eur font-20 text-muted"></i>
+                                            <i class="fas fa-file-alt"></i>
                                             <span class="font-16 m-b-5">Total Complaints: </span>
                                         </div>
                                         <div class="ml-auto">
@@ -108,7 +108,7 @@
                                 <div class="col-md-12">
                                     <div class="d-flex no-block align-items-center">
                                         <div>
-                                            <i class="mdi mdi-poll font-20 text-muted"></i>
+                                            <i class="fas fa-user"></i>
                                             <span class="font-16 m-b-5">Total User: </span>
                                         </div>
                                         <div class="ml-auto">
@@ -130,7 +130,7 @@
                                 <div class="col-md-12">
                                     <div class="d-flex no-block align-items-center">
                                         <div>
-                                            <i class="mdi mdi-poll font-20 text-muted"></i>
+                                            <i class="fas fa-user-shield"></i>
                                             <span class="font-16 m-b-5">Active Accounts:</span>
                                         </div>
                                         <div class="ml-auto">
@@ -152,7 +152,7 @@
                                 <div class="col-md-12">
                                     <div class="d-flex no-block align-items-center">
                                         <div>
-                                            <i class="mdi mdi-poll font-20 text-muted"></i>
+                                            <i class="fas fa-user-shield"></i>
                                             <span class="font-16 m-b-5">Deactive Accounts: </span>
                                         </div>
                                         <div class="ml-auto">
