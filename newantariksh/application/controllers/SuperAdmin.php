@@ -35,6 +35,16 @@ class SuperAdmin extends CI_Controller
         $this->load->view('SuperAdmin/Home/createAdmin',$data);
         $this->load->view('template/footer');
     }
+
+    public function viewPermission()
+    {
+    	$this->load->model('Permission');
+    	$data['rights']=$this->Permission->getAllPermission();
+    	//print_r($data['rights']);
+    	$this->load->view('SuperAdmin/Template/header');
+        $this->load->view('SuperAdmin/Home/viewPermission',$data);
+        $this->load->view('template/footer');
+    }
     public function showAdmin()
     {
         $data['admintable']=$this->db->get('admintable')->result();

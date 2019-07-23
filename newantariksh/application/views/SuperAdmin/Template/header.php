@@ -246,7 +246,15 @@
                                 <li class="sidebar-item"><a href="<?=base_url('index.php/Location/state')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu">Add User</span></a></li>
                                 
                              </ul>
-                        </li>  
+                        </li>
+                        <li class="nav-small-cap"><i class="mdi mdi-dots-horizontal"></i> <span class="hide-menu">Permission</span></li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-collage"></i><span class="hide-menu">Permission</span></a>
+                            <ul aria-expanded="false" class="collapse first-level">
+                                 <li class="sidebar-item"><a href="<?=base_url('index.php/SuperAdmin/viewPermission')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu">Show Permission </span></a></li>
+                                <li class="sidebar-item"><a href="<?=base_url('index.php/Location/state')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu">Add Permission</span></a></li>
+                                
+                             </ul>
+                        </li>   
                          <li class="nav-small-cap"><i class="mdi mdi-dots-horizontal"></i> <span class="hide-menu">Setting</span></li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-collage"></i><span class="hide-menu">Setting</span></a>
                             <ul aria-expanded="false" class="collapse first-level">
