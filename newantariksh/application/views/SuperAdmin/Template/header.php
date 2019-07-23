@@ -199,20 +199,12 @@
                                 </div>
                                 <a class="dropdown-item" href="<?=base_url('index.php/Profile')?>">
                                     <i class="ti-user m-r-5 m-l-5"></i> My Profile</a>
-                                <!-- <a class="dropdown-item" href="javascript:void(0)">
-                                    <i class="ti-wallet m-r-5 m-l-5"></i> My Balance</a>
-                                <a class="dropdown-item" href="javascript:void(0)">
-                                    <i class="ti-email m-r-5 m-l-5"></i> Inbox</a> -->
-                                <!--<div class="dropdown-divider"></div>-->
                                 <a class="dropdown-item" href="javascript:void(0)">
                                     <i class="ti-settings m-r-5 m-l-5"></i> Change Password</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="<?=base_url('index.php/Login/logOut')?>">
                                     <i class="fa fa-power-off m-r-5 m-l-5"></i> Logout</a>
-                                <!--<div class="dropdown-divider"></div>-->
-                                <!-- <div class="p-l-30 p-10">
-                                    <a href="javascript:void(0)" class="btn btn-sm btn-success btn-rounded">View Profile</a>
-                                </div> -->
+                
                             </div>
                         </li>
                        </ul>
@@ -231,9 +223,9 @@
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-av-timer"></i><span class="hide-menu">Admin </span></a>
                             <ul aria-expanded="false" class="collapse  first-level">
                                 
-                                <li class="sidebar-item"><a href="<?=base_url('index.php/Subscriber')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu">Show Admin </span></a></li>
+                                <li class="sidebar-item"><a href="<?=base_url('index.php/Superadmin/createAdmin')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu">Show Admin </span></a></li>
                                 
-                                <li class="sidebar-item"><a href="<?=base_url('index.php/Subscriber/create')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu">Add Admin </span></a></li>
+                                <li class="sidebar-item"><a href="<?=base_url('index.php/Superadmin/showAdmin')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu">Add Admin </span></a></li>
                                 
                               
                             </ul>
@@ -242,66 +234,25 @@
                      <li class="nav-small-cap"><i class="mdi mdi-dots-horizontal"></i> <span class="hide-menu">Company</span></li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-collage"></i><span class="hide-menu">Company</span></a>
                             <ul aria-expanded="false" class="collapse first-level">
-                                 <li class="sidebar-item"><a href="<?=base_url('index.php/Location')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu">Show Company </span></a></li>
-                                <li class="sidebar-item"><a href="<?=base_url('index.php/Location/state')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu">Add Company</span></a></li>
+                                 <li class="sidebar-item"><a href="<?=base_url('index.php/Superadmin/createCompany')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu">Show Company </span></a></li>
+                                <li class="sidebar-item"><a href="<?=base_url('index.php/Superadmin/showCompany')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu">Add Company</span></a></li>
                                 
                              </ul>
                         </li>  
-
-                           
-                          
-
-                       
-                        <li class="nav-small-cap"><i class="mdi mdi-dots-horizontal"></i> <span class="hide-menu">Complaint</span></li>
-                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-border-none"></i><span class="hide-menu">Complaint</span></a>
+                        <li class="nav-small-cap"><i class="mdi mdi-dots-horizontal"></i> <span class="hide-menu">User</span></li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-collage"></i><span class="hide-menu">User</span></a>
                             <ul aria-expanded="false" class="collapse first-level">
-                                 <li class="sidebar-item"><a href="<?=base_url('index.php/Complaint/fetchAllComplaint')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu">Complaint</span></a></li>
-                                <!-- <li class="sidebar-item"><a href="<?=base_url('index.php/Complaint/createComplaint')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu"> Create Complaint</span></a></li> -->
-                                <!-- <li class="sidebar-item"><a href="<?=base_url('index.php/Complaint/cmsSetting')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu"> CMS Setting</span></a></li>
-                                <li class="sidebar-item"><a href="<?=base_url('index.php/Complaint/cmsManager')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu"> CMS Manager</span></a></li>
-                                <li class="sidebar-item"><a href="<?=base_url('index.php/Complaint/cmsEngg')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu"> CMS Enginner</span></a></li> -->
-                               <!--  <li class="sidebar-item"><a href="<?=base_url('index.php/Complaint/cmsCustomerCare')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu"> CMS Customercare</span></a></li> -->
-                                	
-                            </ul>
-                        </li>
-                        <li class="nav-small-cap"><i class="mdi mdi-dots-horizontal"></i> <span class="hide-menu">Plan</span></li>
-                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark sidebar-link" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-image-filter-tilt-shift"></i><span class="hide-menu"> Plan</span></a>
-                            <ul aria-expanded="false" class="collapse first-level">
-                                <li class="sidebar-item"><a href="<?=base_url('index.php/Plan')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu">Plan</span></a></li>
-                                <li class="sidebar-item"><a href="<?=base_url('index.php/Plan/createPlan')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu"> Create Plan</span></a></li>
-                              
+                                 <li class="sidebar-item"><a href="<?=base_url('index.php/Location')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu">Show User </span></a></li>
+                                <li class="sidebar-item"><a href="<?=base_url('index.php/Location/state')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu">Add User</span></a></li>
                                 
-                            </ul>
-                        </li>
-                        <li class="nav-small-cap"><i class="mdi mdi-dots-horizontal"></i> <span class="hide-menu">NAS/IPPOOL</span></li>
-                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark sidebar-link" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-image-filter-tilt-shift"></i><span class="hide-menu"> NAS/IPPOOL</span></a>
+                             </ul>
+                        </li>  
+                         <li class="nav-small-cap"><i class="mdi mdi-dots-horizontal"></i> <span class="hide-menu">Setting</span></li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-collage"></i><span class="hide-menu">Setting</span></a>
                             <ul aria-expanded="false" class="collapse first-level">
-                                <li class="sidebar-item"><a href="<?=base_url('index.php/Naas_Ippool/Radiusclient')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu">Radius Client</span></a></li>
-                                <li class="sidebar-item"><a href="<?=base_url('index.php/Naas_Ippool/createRadiusClient')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu"> Create Radius Client</span></a></li>
-                               
-                            </ul>
-                        </li>
-                      
-                         
-                         <li class="nav-small-cap"><i class="mdi mdi-dots-horizontal"></i> <span class="hide-menu">Reports</span></li>
-                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-border-none"></i><span class="hide-menu">Reports</span></a>
-                             <ul aria-expanded="false" class="collapse first-level">
-                                
-                                <li class="sidebar-item"> <a class="has-arrow sidebar-link" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-playlist-plus"></i> <span class="hide-menu">subscriber Reports/Logs</span></a>
-                                    <ul aria-expanded="false" class="collapse second-level">
-                                        <li class="sidebar-item"><a href="<?=base_url('index.php/Subscriberlog/subscriberReport')?>" class="sidebar-link"><i class="mdi mdi-octagram"></i><span class="hide-menu"> Subscriber Reports</span></a></li>
-                                        <!-- <li class="sidebar-item"><a href="<?=base_url('index.php/Subscriberlog/registrationReport')?>" class="sidebar-link"><i class="mdi mdi-octagram"></i><span class="hide-menu"> Registration Report</span></a></li> -->
-                                       <!--  <li class="sidebar-item"><a href="<?=base_url('index.php/Subscriberlog/Accesslog')?>" class="sidebar-link"><i class="mdi mdi-octagram"></i><span class="hide-menu"> Access Logs</span></a></li> -->
-                                        <li class="sidebar-item"><a href="<?=base_url('index.php/Subscriberlog/sessionlogReport')?>" class="sidebar-link"><i class="mdi mdi-octagram"></i><span class="hide-menu"> Session Logs</span></a></li>
-                                         <!-- <li class="sidebar-item"><a href="<?=base_url('index.php/Subscriberlog/Ipmaclog')?>" class="sidebar-link"><i class="mdi mdi-octagram"></i><span class="hide-menu"> IP Mac Logs</span></a></li> -->
-                                        <!-- <li class="sidebar-item"><a href="<?=base_url('index.php/Subscriberlog/Planwisesubscriber')?>" class="sidebar-link"><i class="mdi mdi-octagram"></i><span class="hide-menu"> Planwise Subscriber</span></a></li> -->
-                                        <li class="sidebar-item"><a href="<?=base_url('index.php/Subscriberlog/Renewalreport')?>" class="sidebar-link"><i class="mdi mdi-octagram"></i><span class="hide-menu"> Renewal Report</span></a></li>
-                                       
-                                    </ul>
-                           
-                              
-                              </ul>
-                        </li>
+                                <li class="sidebar-item"><a href="<?=base_url('index.php/Location')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu">Page Setting</span></a></li>
+                             </ul>
+                        </li>  
                        
                     </ul>
 

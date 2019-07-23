@@ -40,7 +40,7 @@
                                             <span class="font-16 m-b-5">Total Admin: </span>
                                         </div>
                                         <div class="ml-auto">
-                                            <h2 class="font-light text-right"><?='214'?></h2>
+                                            <h3 class="font-light text-right">236</h3>
                                         </div>
                                     </div>
                                 </div>
@@ -64,7 +64,7 @@
                                             <span class="font-16 m-b-5">Total Companies: </span>
                                         </div>
                                         <div class="ml-auto">
-                                            <h2 class="font-light text-right">169</h2>
+                                            <h3 class="font-light text-right">236</h3>
                                         </div>
                                     </div>
                                 </div>
@@ -88,7 +88,7 @@
                                             <span class="font-16 m-b-5">Total Complaints: </span>
                                         </div>
                                         <div class="ml-auto">
-                                            <h2 class="font-light text-right">157</h2>
+                                            <h3 class="font-light text-right">236</h3>
                                         </div>
                                     </div>
                                 </div>
@@ -112,7 +112,7 @@
                                             <span class="font-16 m-b-5">Total User: </span>
                                         </div>
                                         <div class="ml-auto">
-                                            <h2 class="font-light text-right">236</h2>
+                                            <h3 class="font-light text-right">236</h3>
                                         </div>
                                     </div>
                                 </div>
@@ -134,7 +134,7 @@
                                             <span class="font-16 m-b-5">Active Accounts:</span>
                                         </div>
                                         <div class="ml-auto">
-                                            <h2 class="font-light text-right">236</h2>
+                                            <h3 class="font-light text-right">236</h3>
                                         </div>
                                     </div>
                                 </div>
@@ -152,11 +152,11 @@
                                 <div class="col-md-12">
                                     <div class="d-flex no-block align-items-center">
                                         <div>
-                                            <i class="fas fa-user-shield"></i>
+                                            <i class="fas fa-user-alt-slash"></i>
                                             <span class="font-16 m-b-5">Deactive Accounts: </span>
                                         </div>
                                         <div class="ml-auto">
-                                            <h2 class="font-light text-right">236</h2>
+                                            <h3 class="font-light text-right">236</h3>
                                         </div>
                                     </div>
                                 </div>
