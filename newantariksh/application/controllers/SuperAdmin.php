@@ -39,8 +39,10 @@ class SuperAdmin extends CI_Controller
     public function viewPermission()
     {
     	$this->load->model('Permission');
+    	$this->load->model('UserRoleModel');
     	$data['rights']=$this->Permission->getAllPermission();
-    	//print_r($data['rights']);
+    	$data['roles']=$this->UserRoleModel->getAllUserRole();
+    	// print_r($data['roles']);
     	$this->load->view('SuperAdmin/Template/header');
         $this->load->view('SuperAdmin/Home/viewPermission',$data);
         $this->load->view('template/footer');

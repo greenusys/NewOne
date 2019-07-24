@@ -4,8 +4,8 @@
             <!-- ============================================================== -->
     <div class="page-breadcrumb">
         <div class="row" id="divCreatePlan" >
-            <div class="col-lg-6 offset-lg-3">
-                <div class="card  p-5">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="card  p-2">
                     <?php
                         if($this->session->flashdata('msg'))
                         {
@@ -13,32 +13,38 @@
                         }
                     ?>
                    <form action="<?=base_url('index.php/Superadmin/addAdmin')?>" method="post">
-                        <h3 class="text-center">Create Admin</h3>
-                        <div class="col-lg-12">
+                        <h3 ><strong>Create Admin</strong></h3>
+                        <hr>
+                        <div class="row">
+                        <div class="col-lg-6">
                            <label>Admin Name<span class="text-danger">*</span></label>
                            <Input type="text" name="adminname" placeholder="Enter Admin Name" class="form-control" required>
-                        </div><br>
-                         <div class="col-lg-12">
+                        </div>
+                         <div class="col-lg-6">
                            <label>Email ID<span class="text-danger">*</span></label>
                            <Input type="email" name="email" placeholder="Enter Your Email" class="form-control" utocomplete="off" required>
-                        </div><br>
-                        <div class="col-lg-12">
+                        </div>
+                    </div><br>
+                    <div class="row">
+                        <div class="col-lg-6">
                            <label>Alternate email</label>
                            <Input type="email" name="altemail" placeholder="Enter Your Alternate Email" class="form-control" utocomplete="off">
-                        </div><br>
+                        </div>
                        
-                        <div class="col-lg-12">
+                        <div class="col-lg-6">
                            <label>Password<span class="text-danger">*</span></label>
                            <Input type="Password" name="password" placeholder="Enter Your Password" class="form-control" utocomplete="off" required>
-                        </div><br>
-                         <div class="col-lg-12">
+                        </div></div><br>
+                        <div class="row">
+                         <div class="col-lg-6">
                            <label>Installation Address<span class="text-danger">*</span></label>
                            <Input type="text" name="install_add" placeholder="Enter Your Installation Address" class="form-control" utocomplete="off">
                         </div><br>
-                        <div class="col-lg-12">
+                        <div class="col-lg-6">
                            <label>Correspondance Address<span class="text-danger">*</span></label>
                            <Input type="text" name="corres_add" placeholder="Enter Your Alternate Address" class="form-control" utocomplete="off">
                         </div><br>
+                        </div>
                         <div class="row">
 	                        <div class="col-lg-6">
 	                           <label>Contact No. 1<span class="text-danger">*</span></label>

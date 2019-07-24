@@ -15,22 +15,30 @@
                                        <th class="text-center font-weight-bold">#</th>
                                        <th class="text-center font-weight-bold">User Type</th>
                                        <th class="text-center font-weight-bold">Rights</th>
-                                       <th class="text-center font-weight-bold">Status</th>
+                                     
                                        
                                    </thead>
                                    <tbody id="allPlanData">
                                       <?php
                                        // print_r($complaints);
                                       $i=1;
-                                        foreach ($rights as $comp ) {
+                                        foreach ($roles as $role ) {
                                             ?>
                                                 <tr>
-                                                    <td class="text-center"><?=$i?></td>
-                                                    <td class="text-center"><?=$comp->comp_name?></td>
-                                                    <td class="text-center"><?=$comp->comp_area?></td>
-                                                    <td class="text-center"><?=$comp->comp_address?></td>
-                                                    <td class="text-center"><?=$comp->permissions?></td>
-                                                    <td class="text-center"><a href="javascript:void(0)" class="btn btn-info">Acitve</a> <a href="javascript:void(0)" class="btn btn-danger">Deactive</a></td>
+                                                    <td><?=$i?></td>
+                                                    <td class="text-center"><?=$role->name?></td>
+                                                    <td class="text-center">
+                                                        <table width="100%">
+                                                        <tr>
+                                                        <?php
+                                                            foreach ($rights as $right ) {
+                                                                echo '<td><input type="checkbox" name="right'.$i.'" value="'.$right->rights_name.'">'.$right->rights_name.'</td>';
+                                                            }
+                                                        ?>
+                                                        </tr>
+                                                        </table>
+                                                    </td>
+                                                   
                                                 </tr>
                                             <?php
                                             $i++;
@@ -38,7 +46,12 @@
                                         
                                       ?>
                                    </tbody>
+
                                </table>
+                               <div align="right">
+                                   <input type="submit" value="Save" class="btn btn-info px-4">
+                               </div>
+                                
                            </div>
                         </div>
                     </div>
