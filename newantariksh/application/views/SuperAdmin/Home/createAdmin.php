@@ -12,39 +12,41 @@
                             echo '<div class="alert alert-info">'.$this->session->flashdata('msg').'</div>';
                         }
                     ?>
-                   <form action="<?=base_url('index.php/Superadmin/addAdmin')?>" method="post">
-                        <h3 ><strong>Create Admin</strong></h3>
+                   <form action="<?=base_url('index.php/Superadmin/addAdmin')?>" method="post"><br>
+                         <h3 class="text-center">Create Admin</h3>
                         <hr>
                         <div class="row">
-                        <div class="col-lg-6">
-                           <label>Admin Name<span class="text-danger">*</span></label>
-                           <Input type="text" name="adminname" placeholder="Enter Admin Name" class="form-control" required>
-                        </div>
-                         <div class="col-lg-6">
-                           <label>Email ID<span class="text-danger">*</span></label>
-                           <Input type="email" name="email" placeholder="Enter Your Email" class="form-control" utocomplete="off" required>
-                        </div>
-                    </div><br>
-                    <div class="row">
-                        <div class="col-lg-6">
-                           <label>Alternate email</label>
-                           <Input type="email" name="altemail" placeholder="Enter Your Alternate Email" class="form-control" utocomplete="off">
-                        </div>
-                       
-                        <div class="col-lg-6">
-                           <label>Password<span class="text-danger">*</span></label>
-                           <Input type="Password" name="password" placeholder="Enter Your Password" class="form-control" utocomplete="off" required>
-                        </div></div>
+                            <div class="col-lg-6">
+                               <label>Admin Name<span class="text-danger">*</span></label>
+                               <Input type="text" name="adminname" placeholder="Enter Admin Name" class="form-control" required>
+                            </div>
+                            <div class="col-lg-6">
+                               <label>Email ID<span class="text-danger">*</span></label>
+                               <Input type="email" name="email" placeholder="Enter Your Email" class="form-control" utocomplete="off" required>
+                            </div>
+                        </div><br>
                         <div class="row">
-                         <div class="col-lg-6">
-                           <label>Installation Address<span class="text-danger">*</span></label>
-                           <Input type="text" name="install_add" placeholder="Enter Your Installation Address" class="form-control" utocomplete="off">
+                            <div class="col-lg-6">
+                               <label>Alternate email</label>
+                               <Input type="email" name="altemail" placeholder="Enter Your Alternate Email" class="form-control" utocomplete="off">
+                            </div>
+                            <div class="col-lg-6">
+                               <label>Password<span class="text-danger">*</span></label>
+                               <Input type="Password" name="password" placeholder="Enter Your Password" class="form-control" utocomplete="off" required>
+                            </div>
                         </div>
-                        <div class="col-lg-6">
-                           <label>Correspondance Address<span class="text-danger">*</span></label>
-                           <Input type="text" name="corres_add" placeholder="Enter Your Alternate Address" class="form-control" utocomplete="off">
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <label>Installation Address<span class="text-danger">*</span></label>
+                                <Input type="text" name="install_add" placeholder="Enter Your Installation Address" class="form-control" utocomplete="off">
+                            </div>
+                            <div class="col-lg-6">
+                                <label>Correspondance Address<span class="text-danger">*</span></label>
+                                <Input type="text" name="corres_add" placeholder="Enter Your Alternate Address" class="form-control" utocomplete="off">
+                            </div>
                         </div>
-                        </div>
+                        <br>
                         <div class="row">
 	                        <div class="col-lg-6">
 	                           <label>Contact No. 1<span class="text-danger">*</span></label>
@@ -55,6 +57,7 @@
 	                           <Input type="text" name="cont_person1" placeholder="Enter Contact Person 1" class="form-control" utocomplete="off">
                         	</div>
                         </div>
+                        <br>
                         <div class="row">
 	                        <div class="col-lg-6">
 	                           <label>Contact No. 2<span class="text-danger">*</span></label>
@@ -64,23 +67,23 @@
 	                           <label>Contact Person 2<span class="text-danger">*</span></label>
 	                           <Input type="text" name="cont_person2" placeholder="Enter Contact Person 2" class="form-control" utocomplete="off">
                         	</div>
-                        </div>
+                        </div><br>
                         <div class="col-lg-12">
                             <label>Choose Company <span class="text-danger">*</span></label><br>
                             <div classs="row">
-                        	<select name="company[]" class="form-control" multiple="">
-                            <?php                                         
-                            foreach ($company as $key) 
-                            {
+                            	<select name="company[]" class="form-control" multiple="">
+                                <?php                                         
+                                foreach ($company as $key) 
+                                {
+                                    ?>
+                                    <option name="permission[]" value="<?=$key->id?>"><?=$key->comp_name?></option>
+                                        <!-- <div class="col-lg-6">
+                                            <input type="checkbox" name="permission[]" value="<?=$key->id?>"><span class="mr-4"> <?=$key->comp_name?></span>
+                                        </div> -->
+                                    <?php   
+                                }
                                 ?>
-                                <option name="permission[]" value="<?=$key->id?>"><?=$key->comp_name?></option>
-                                    <!-- <div class="col-lg-6">
-                                        <input type="checkbox" name="permission[]" value="<?=$key->id?>"><span class="mr-4"> <?=$key->comp_name?></span>
-                                    </div> -->
-                                <?php   
-                            }
-                            ?>
-                        	</select>
+                            	</select>
                             </div>
                         </div>
                         <br>

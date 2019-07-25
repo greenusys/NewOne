@@ -25,7 +25,7 @@ a:hover {
 
             <div class="box-header well" data-original-title="">
 
-                <h2><i class="glyphicon glyphicon-edit"></i> Add User</h2>
+                 <h3 class="text-center">Create Company</h3>
 
             </div>
 <!-- <div class="row">
@@ -66,66 +66,54 @@ a:hover {
                         <div class="panel-group" id="accordion">
 
                             <!-- panel1  -->
-                            <div class="panel panel-default active" id="panel1">
-                              <div class="panel-heading" data-toggle="collapse" data-target="#collapse1">
-                                <h4 class="panel-title"><a data-toggle="collapse" data-target="#collapse1" href="#collapse1">Personal Details</a></h4>
-                                <hr>
-                              </div>
+	                        <div class="panel panel-default active" id="panel1">
+	                          <div class="panel-heading" data-toggle="collapse" data-target="#collapse1">
+	                            <h4 class="panel-title"><a data-toggle="collapse" data-target="#collapse1" href="#collapse1">User Details</a></h4>
+	                            <hr>
+	                          </div>
+						<div id="collapse1" class="panel-collapse fade collapse show">
+                        	<div class="panel-body">
+		                    	<div class="row stoppaddignleft stoppaddignright">
+			                        <div class="col-md-6 stoppaddignleft">
+			                            <div class="form-group field-subscriber-first_name required">
+				                         	<label class="control-label" for="companyname">Company Name<span class="text-danger"> *</span></label>
+	                                       <Input type="text" name="companyname" placeholder="Enter Your Company Name" class="form-control" required>
+				                            <div class="help-block"></div>
+				                            </div>                      
+		                        	</div>
+			                        <div class="col-md-6 stoppaddignleft stoppaddignright">
+			                            <div class="form-group field-subscriber-last_name required">
+			                            <label class="control-label">Username<span class="text-danger"> *</span></label>
+	                                   	<Input type="text" name="username" placeholder="Enter Your username" class="form-control" required>
 
-                      <div id="collapse1" class="panel-collapse fade collapse show">
-                        <div class="panel-body">
-		                    <div class="row stoppaddignleft stoppaddignright">
-		                        <div class="col-md-6 stoppaddignleft">
-		                            <div class="form-group field-subscriber-first_name required">
-		                            <label class="control-label" for="subscriber-first_name">First Name</label>
-		                            <input type="text" id="subscriber-first_name" class="form-control rounded" name="first_name"  placeholder="Example: John" aria-required="true" required>
-
-		                            <div class="help-block"></div>
-		                            </div>                      
-		                        </div>
-                       <!--  <div class="col-md-4 stoppaddignleft">
-                            <div class="form-group field-subscriber-middle_name">
-                                <label class="control-label" for="subscriber-middle_name">Middle Name</label>
-                                <input type="text" id="subscriber-middle_name" class="form-control rounded" name="middle_name" >
-
-                                <div class="help-block"></div>
-                                </div>                        
-                        </div> -->
-		                        <div class="col-md-6 stoppaddignleft stoppaddignright">
-		                            <div class="form-group field-subscriber-last_name required">
-		                            <label class="control-label" for="subscriber-last_name">Last Name</label>
-		                            <input type="text" id="subscriber-last_name" class="form-control rounded" name="last_name" placeholder="Example: Carter" aria-required="true" required>
-
-		                            <div class="help-block"></div>
-		                            </div>                        
-		                        </div>
-                    		</div>
-
-                    <div class="row">
-                    	<div class="col-md-6 stoppaddignleft">
-                            <div class="form-group field-subscriber-aadhar_number">
-								<label class="control-label" for="subscriber-aadhar_number">Aadhar Number</label>
-								<input type="text" id="subscriber-aadhar_number" class="form-control rounded" name="aadhar_number" placeholder="Example: xxxx xxxx xxxx xxxx" autocomplete="off"  onkeyup="limitlength(this,16)">
+			                            <div class="help-block"></div>
+			                            </div>                        
+			                        </div>
+                    			</div>
+			                	<div class="row">
+			                    	<div class="col-md-6 stoppaddignleft">
+			                            <div class="form-group field-subscriber-aadhar_number">
+											  <label>Password<span class="text-danger">*</span></label>
+		                                       <Input type="Password" name="password" placeholder="Enter Your Password" class="form-control" required>
+											<div class="help-block"></div>
+										</div>                       
+									</div>
+			                        <div class="col-md-6 stoppaddignleft stoppaddignright">
+			                             <div class="form-group field-subscriber-pan_number">
+											  <label>Confirm Password<span class="text-danger">*</span></label>
+		                                       <Input type="Password" name="confirm_password" placeholder="Enter Your Password Again" class="form-control" required>
+											<div class="help-block"></div>
+										</div>                      
+									</div>
+			                    </div>
+	                    <div class="row stoppaddignleft stoppaddignright">
+				            <div class="form-group field-subscriber-email_id required col-12" >
+								<label class="control-label" for="subscriber-email_id">Email ID</label>
+								<input type="email" id="subscriber-email_id" placeholder="Example: John@Carter.com" class="form-control" name="email" aria-required="true">
 
 								<div class="help-block"></div>
-							</div>                       
+							</div>                    
 						</div>
-                        <div class="col-md-6 stoppaddignleft stoppaddignright">
-                             <div class="form-group field-subscriber-pan_number">
-								<label class="control-label" for="subscriber-pan_number">PAN Number</label>
-								<input type="text" id="subscriber-pan_number" class="form-control rounded" name="pan_number" placeholder="Example: ABCDE12345 " autocomplete="off">
-								<div class="help-block"></div>
-							</div>                      
-						</div>
-                    </div>
-                    <div class="row stoppaddignleft stoppaddignright">
-			            <div class="form-group field-subscriber-email_id required col-12" >
-							<label class="control-label" for="subscriber-email_id">Email ID</label>
-							<input type="email" id="subscriber-email_id" placeholder="Example: John@Carter.com" class="form-control" name="email" aria-required="true">
-
-							<div class="help-block"></div>
-						</div>                    
-					</div>
 					<div class="row stoppaddignleft stoppaddignright">
                         <div class="col-md-3 stoppaddignleft">
                             <div class="form-group field-subscriber-username required">

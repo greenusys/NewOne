@@ -22,40 +22,39 @@
                                    <div class="col-lg-6">
                                        <label>Company Name<span class="text-danger">*</span></label>
                                        <Input type="text" name="companyname" placeholder="Enter Your Company Name" class="form-control" required>
-                                   </div><br>
+                                   </div>
                                    <div class="col-lg-6">
                                        <label>Username<span class="text-danger">*</span></label>
                                        <Input type="text" name="username" placeholder="Enter Your username" class="form-control" required>
                                    </div> 
-                               </div>
+                               </div><br>
                                <div class="row">
                                    <div class="col-lg-6">
                                        <label>Password<span class="text-danger">*</span></label>
                                        <Input type="Password" name="password" placeholder="Enter Your Password" class="form-control" required>
-                                   </div><br>
-
+                                   </div>
                                    <div class="col-lg-6">
                                        <label>Company Address <span class="text-danger">*</span></label>
                                         <Input type="text" name="companyadd" placeholder="Enter Your Company Address" class="form-control" required>
-                                   </div></div>
+                                   </div></div><br>
                                    <div class="row">
                                    <div class="col-lg-6">
                                        <label>Company Mobile No<span class="text-danger">*</span></label>
                                        <Input type="text" name="companymob" placeholder="Enter Your Company Mobile Number" pattern="[0-9]*" max-length="10" min-length="10" title="Invalid Input" class="form-control" required>
-                                   </div><br>
+                                   </div>
                                    <div class="col-lg-6">
                                        <label>Company Area<span class="text-danger">*</span></label>
                                        <Input type="text" name="companyarea" placeholder="Enter Your Company Area" class="form-control" required>
-                                   </div></div>
+                                   </div></div><br>
                                    <div class="row">
                                    <div class="col-lg-6">
                                        <label>GSTN Area<span class="text-danger">*</span></label>
                                        <Input type="text" name="gstn" placeholder="Enter Your GST Number" class="form-control" required>
-                                   </div><br>
+                                   </div>
                                    <div class="col-lg-6">
                                        <label>PAN<span class="text-danger">*</span></label>
                                        <Input type="text" name="pan" placeholder="Enter Your Pan Number" class="form-control" required>
-                                   </div></div>
+                                   </div></div><br>
                                    <div class="row">
                                      <div class="col-lg-6">
                                        <label>Installation Address<span class="text-danger">*</span></label>
@@ -66,25 +65,27 @@
                                        <Input type="text" name="corres_add" placeholder="Enter Your Alternate Address" class="form-control" utocomplete="off">
                                     </div>
                                     </div>
-                                   <div class="col-lg-12">
-                                        <label>Assign Pemission <span class="text-danger">*</span></label><br>
-                                        <div classs="row">
-                                            <?php                                         
-                                            foreach ($permissions as $key) 
-                                            {
-                                                ?>
-                                                   <!--  <div class="col-lg-6">
-                                                        <input type="checkbox" name="permission[]" value="<?=$key->id?>"><span class="mr-4"><?=$key->name?></span>
-                                                    </div> -->
-                                                <?php   
-                                            }
-                                            ?>
-                                            <!-- <input type="checkbox" name="permission[]" value="1"><span class="mr-4">Create</span>
-                                            <input type="checkbox" name="permission[]" value="2"><span class="mr-4">Update</span>
-                                            <input type="checkbox" name="permission[]" value="3"><span class="mr-4">Delete</span> -->
-                                        </div>
-                                   </div>
                                    <br>
+                                   <div class="row">
+                                    <div class="col-lg-6">
+                                       <label>Contact No. 1<span class="text-danger">*</span></label>
+                                       <Input type="text" name="cont_no1" placeholder="Enter Contact No. 1" class="form-control" utocomplete="off">
+                                    </div>
+                                    <div class="col-lg-6">
+                                       <label>Contact Person 1<span class="text-danger">*</span></label>
+                                       <Input type="text" name="cont_person1" placeholder="Enter Contact Person 1" class="form-control" utocomplete="off">
+                                    </div>
+                                  </div><br>
+                                  <div class="row">
+                                    <div class="col-lg-6">
+                                       <label>Contact No. 2<span class="text-danger">*</span></label>
+                                       <Input type="text" name="cont_no2" placeholder="Enter Contact No. 2" class="form-control" utocomplete="off">
+                                    </div>
+                                    <div class="col-lg-6">
+                                       <label>Contact Person 2<span class="text-danger">*</span></label>
+                                       <Input type="text" name="cont_person2" placeholder="Enter Contact Person 2" class="form-control" utocomplete="off">
+                                    </div>
+                                  </div><br><br>
                                <div class="text-center">
                             
                                     <input type="submit" value="Create"  class="btn btn-primary">';

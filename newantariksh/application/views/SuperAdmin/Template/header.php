@@ -222,13 +222,8 @@
                         <li class="nav-small-cap"><i class="mdi mdi-dots-horizontal"></i> <span class="hide-menu">Admin</span></li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-av-timer"></i><span class="hide-menu">Admin </span></a>
                             <ul aria-expanded="false" class="collapse  first-level">
-                                
-                                
-                                
-                                <li class="sidebar-item"><a href="<?=site_url('SuperAdmin/showAdmin')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu">Show Admin </span></a></li>
                                 <li class="sidebar-item"><a href="<?=site_url('SuperAdmin/createAdmin')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu">Add Admin </span></a></li>
-                                
-                              
+                                <li class="sidebar-item"><a href="<?=site_url('SuperAdmin/showAdmin')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu">Show Admin </span></a></li> 
                             </ul>
                         </li>
                         
