@@ -51,7 +51,14 @@ a:hover {
 		</div> -->
 		<div class="col-md-12">
         <div class="box-content" style="min-height: 750px">
-            <form role="form" id="create_sub" method="post">
+        	<?php
+        		if($this->session->flashdata('msg'))
+        		{
+        			echo '<div class="alert alert-info">'.$this->session->flashdata('msg').'</div>';
+        		}
+        	?>
+            <form role="form"  action="<?=site_url('User/addUser')?>" method="post">
+            	<input type="hidden" name="url" value="<?= $this->uri->uri_string();?>">
                 <div class="row">
                 <div class="col-md-6">
                 <div class="card" >
@@ -179,88 +186,7 @@ a:hover {
 							</div>                       
 						</div>
                     </div>  
-                    <!-- <div class="form-group field-subscriber-billing_name">
-                        <label class="control-label" for="subscriber-billing_name">Billing Name</label>
-                        <input type="text" id="subscriber-billing_name" class="form-control rounded" name="billing_name" >
-
-                        <div class="help-block"></div>
-                    </div> -->                    
-                                            
                     
-					<!-- <div class="row stoppaddignleft stoppaddignright">
-						<div class="col-md-6 stoppaddignleft">
-							<div class="form-group field-subscriber-opr_id required">
-							<label class="control-label" for="subscriber-opr_id">Partner</label>
-							<select id="subscriber-opr_id" class="form-control rounded" name="partner" onchange="" aria-required="true">
-							<option value="">Select Partner</option>
-							<option value="2">Antariksh</option>
-							<option value="3">Hriday</option>
-							<option value="4">Puran Nagar</option>
-							<option value="5">Manglapuri</option>
-							<option value="7">Rajnagar-2</option>
-							<option value="8">Rajnagar-1</option>
-							<option value="9">DOT</option>
-							<option value="10">Delhicantt</option>
-							<option value="11">Vikasnagar</option>
-							<option value="12">Pushpanjali</option>
-							<option value="13">Corporate</option>
-							<option value="14">Free</option>
-							<option value="15">Sagarpur</option>
-							<option value="16">Najafgarh</option>
-							<option value="17">Nanglidairy</option>
-							<option value="18">Kakrola</option>
-							<option value="19">Dwarka</option>
-							<option value="21">Mahavir</option>
-							<option value="22">Sadhnagar</option>
-							<option value="23">Rajnagar</option>
-							<option value="24">VipinGarden</option>
-							<option value="25">VikasPuri</option>
-							<option value="26">VashistPark</option>
-							<option value="27">VAISHALI</option>
-							<option value="28">UttamNagar</option>
-							<option value="29">RajoriGarden</option>
-							<option value="30">PochanPur</option>
-							<option value="31">PalamVillage</option>
-							<option value="32">NSP</option>
-							<option value="33">MehramNagar</option>
-							<option value="34">KrishnaPark</option>
-							<option value="35">KirtiNagar</option>
-							<option value="36">KanganHeri</option>
-							<option value="37">KailashPuri</option>
-							<option value="38">JankiPuri</option>
-							<option value="39">JanakPuri</option>
-							<option value="40">IndraPark</option>
-							<option value="41">GuruGram</option>
-							<option value="42">DurgaPark</option>
-							<option value="43">DashrathPuri</option>
-							<option value="44">BindaPur</option>
-							<option value="45">BagDola</option>
-							<option value="46">BijWasan</option>
-							<option value="47">KapasHera</option>
-							<option value="48">RajaPuri</option>
-							<option value="49">Shyam Vihar</option>
-							<option value="50">NasirPur</option>
-							<option value="51">VijayEnclave</option>
-							<option value="52">Goyladairy</option>
-							<option value="53">Shahabad</option>
-							<option value="54">Jagnnath Kumar</option>
-							</select>
-
-							<div class="help-block"></div>
-							</div>                      
-						</div>
-                        <div class="col-md-6 stoppaddignleft">
-	                        <div class="form-group field-rclients required">
-								<label class="control-label" for="rclients">Radius Client</label>
-								<select id="rclients" class="form-control rounded" name="radius_client" aria-required="true">
-								<option value="">Select...</option>
-								</select>
-
-								<div class="help-block"></div>
-							</div>                      
-						</div>
-                        
-                    </div> -->
                    
                         </div>
                       </div>
@@ -684,8 +610,10 @@ a:hover {
 									</div>
 			                    </div> 
 			                    <div class="row">
+
 			                    	<div class="col-lg-12">
-			                    		<div class="text-center">  
+			                    		<hr>
+			                    		<div align="right">  
 			                    			<button type="submit" class="btn btn-primary" name="Frm_User">Add User</button>
 			                    			<button type="submit" class="btn btn-secondary" name="Frm_User">Update User</button>
                     					</div>

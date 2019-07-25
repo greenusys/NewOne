@@ -26,6 +26,28 @@
     
             return $query->result();
         }
+        function form_insert($data,$newdata,$radcheck,$radcheck1,$radcheck2,$radcheck3,$newrad)
+        {
+            if($this->db->insert('users', $data))
+            {
+                if($this->db->insert('radcheck',$radcheck)){
+                    $this->db->insert('radcheck',$radcheck1);
+                    $this->db->insert('radcheck',$radcheck2);
+                    $this->db->insert('radcheck',$radcheck3);
+                    // $this->db->insert('radcheck',$radcheck4);
+                    $this->db->insert('radusergroup',$newdata);
+                    $this->db->insert('radreply',$newrad);
+                	return  1;
+                }
+                else{
+                    return  0;
+                }
+            }
+            else
+            {
+                return  0;
+            }
+        }
 	}
 
 ?>
