@@ -62,46 +62,132 @@ a:hover {
                             <div class="panel panel-default active" id="panel1">
                               <div class="panel-heading" data-toggle="collapse" data-target="#collapse1">
                                 <h4 class="panel-title"><a data-toggle="collapse" data-target="#collapse1" href="#collapse1">Personal Details</a></h4>
+                                <hr>
                               </div>
 
                       <div id="collapse1" class="panel-collapse fade collapse show">
                         <div class="panel-body">
-                      
-                    <div class="row stoppaddignleft stoppaddignright">
-                        <div class="col-md-4 stoppaddignleft">
-                            <div class="form-group field-subscriber-first_name required">
-                            <label class="control-label" for="subscriber-first_name">First Name</label>
-                            <input type="text" id="subscriber-first_name" class="form-control rounded" name="first_name"  aria-required="true" required>
+		                    <div class="row stoppaddignleft stoppaddignright">
+		                        <div class="col-md-6 stoppaddignleft">
+		                            <div class="form-group field-subscriber-first_name required">
+		                            <label class="control-label" for="subscriber-first_name">First Name</label>
+		                            <input type="text" id="subscriber-first_name" class="form-control rounded" name="first_name"  placeholder="Example: John" aria-required="true" required>
 
-                            <div class="help-block"></div>
-                            </div>                      
-                        </div>
-                        <div class="col-md-4 stoppaddignleft">
+		                            <div class="help-block"></div>
+		                            </div>                      
+		                        </div>
+                       <!--  <div class="col-md-4 stoppaddignleft">
                             <div class="form-group field-subscriber-middle_name">
                                 <label class="control-label" for="subscriber-middle_name">Middle Name</label>
                                 <input type="text" id="subscriber-middle_name" class="form-control rounded" name="middle_name" >
 
                                 <div class="help-block"></div>
                                 </div>                        
+                        </div> -->
+		                        <div class="col-md-6 stoppaddignleft stoppaddignright">
+		                            <div class="form-group field-subscriber-last_name required">
+		                            <label class="control-label" for="subscriber-last_name">Last Name</label>
+		                            <input type="text" id="subscriber-last_name" class="form-control rounded" name="last_name" placeholder="Example: Carter" aria-required="true" required>
+
+		                            <div class="help-block"></div>
+		                            </div>                        
+		                        </div>
+                    		</div>
+
+                    <div class="row">
+                    	<div class="col-md-6 stoppaddignleft">
+                            <div class="form-group field-subscriber-aadhar_number">
+								<label class="control-label" for="subscriber-aadhar_number">Aadhar Number</label>
+								<input type="text" id="subscriber-aadhar_number" class="form-control rounded" name="aadhar_number" placeholder="Example: xxxx xxxx xxxx xxxx" autocomplete="off"  onkeyup="limitlength(this,16)">
+
+								<div class="help-block"></div>
+							</div>                       
+						</div>
+                        <div class="col-md-6 stoppaddignleft stoppaddignright">
+                             <div class="form-group field-subscriber-pan_number">
+								<label class="control-label" for="subscriber-pan_number">PAN Number</label>
+								<input type="text" id="subscriber-pan_number" class="form-control rounded" name="pan_number" placeholder="Example: ABCDE12345 " autocomplete="off">
+								<div class="help-block"></div>
+							</div>                      
+						</div>
+                    </div>
+                    <div class="row stoppaddignleft stoppaddignright">
+			            <div class="form-group field-subscriber-email_id required col-12" >
+							<label class="control-label" for="subscriber-email_id">Email ID</label>
+							<input type="email" id="subscriber-email_id" placeholder="Example: John@Carter.com" class="form-control" name="email" aria-required="true">
+
+							<div class="help-block"></div>
+						</div>                    
+					</div>
+					<div class="row stoppaddignleft stoppaddignright">
+                        <div class="col-md-3 stoppaddignleft">
+                            <div class="form-group field-subscriber-username required">
+                                <label class="control-label" for="subscriber-username">Username</label>
+                                <input type="text" id="subscriber-username" class="form-control rounded" name="username" aria-required="true">
+
+                                <div class="help-block"></div>
+                            </div>                           
                         </div>
-                        <div class="col-md-4 stoppaddignleft stoppaddignright">
-                            <div class="form-group field-subscriber-last_name required">
-                            <label class="control-label" for="subscriber-last_name">Last Name</label>
-                            <input type="text" id="subscriber-last_name" class="form-control rounded" name="last_name"  aria-required="true" required>
+                        <div class="col-md-3 stoppaddignleft">
+                            <div class="form-group field-subscriber-password required">
+                                <label class="control-label" for="subscriber-password">Password</label>
+                                <input type="password" id="subscriber-password" class="form-control rounded" name="password"  aria-required="true">
+
+                                <div class="help-block"></div>
+                            </div>                           
+                        </div>
+                        <div class="col-md-3 stoppaddignleft">
+                            <div class="form-group field-subscriber-password_repeat required">
+                            <label class="control-label" for="subscriber-password_repeat">Confirm password</label>
+                            <input type="password" id="subscriber-password_repeat" class="form-control rounded" name="Subscriber[password_repeat]" aria-required="true">
 
                             <div class="help-block"></div>
-                            </div>                        
+                            </div>                            
                         </div>
-                    </div>
-                    <div class="form-group field-subscriber-billing_name">
+					    <div class="col-md-3 stoppaddignleft stoppaddignright">
+					        <div class="form-group field-subscriber-portal_password required">
+					        <label class="control-label" for="subscriber-portal_password">Portal Password</label>
+					        <input type="password" id="subscriber-portal_password" class="form-control rounded" name="portal_password" aria-required="true">
+
+					        <div class="help-block"></div>
+					        </div>
+					    </div>
+					</div>
+					<div class="row stoppaddignleft stoppaddignright">
+                        <div class="col-md-4 stoppaddignleft">
+	                        <div class="form-group field-subscriber-mobile_number required has-error">
+								<label class="control-label" for="subscriber-mobile_number">Mobile Number</label>
+								<input type="text" id="subscriber-mobile_number" class="form-control" name="mobile" placeholder="Example: +91-xxxxxxxxxx" pattern="[0-9]{10}" maxlength="10" title="number only">
+
+								<div class="help-block " style="display: none">Mobile Number cannot be blank.</div>
+							</div>                      
+						</div>
+                        <div class="col-md-4 stoppaddignleft">
+	                        <div class="form-group field-subscriber-alternate_mobile_number">
+								<label class="control-label" for="subscriber-alternate_mobile_number">Alternate Number</label>
+								<input type="text" id="subscriber-alternate_mobile_number" class="form-control rounded" name="alternate_mobile" placeholder="Example: +91-xxxxxxxxxx" pattern="[0-9]{10}" maxlength="10" title="number only" >
+
+								<div class="help-block"></div>
+							</div>                      
+					    </div>
+                        <div class="col-md-4 stoppaddignleft stoppaddignright">
+                        	<div class="form-group field-subscriber-contact_number">
+								<label class="control-label" for="subscriber-contact_number">Contact Number</label>
+								<input type="text" id="subscriber-contact_number" class="form-control rounded" name="contact_number" placeholder="Example: +91-xxxxxxxxxx" pattern="[0-9]{10}" maxlength="10" title="number only">
+
+								<div class="help-block"></div>
+							</div>                       
+						</div>
+                    </div>  
+                    <!-- <div class="form-group field-subscriber-billing_name">
                         <label class="control-label" for="subscriber-billing_name">Billing Name</label>
                         <input type="text" id="subscriber-billing_name" class="form-control rounded" name="billing_name" >
 
                         <div class="help-block"></div>
-                    </div>                    
+                    </div> -->                    
                                             
                     
-					<div class="row stoppaddignleft stoppaddignright">
+					<!-- <div class="row stoppaddignleft stoppaddignright">
 						<div class="col-md-6 stoppaddignleft">
 							<div class="form-group field-subscriber-opr_id required">
 							<label class="control-label" for="subscriber-opr_id">Partner</label>
@@ -174,7 +260,7 @@ a:hover {
 							</div>                      
 						</div>
                         
-                    </div>
+                    </div> -->
                    
                         </div>
                       </div>
@@ -191,159 +277,88 @@ a:hover {
                             <!-- panel1  -->
                             <div class="panel panel-default" id="panel5">
                               <div class="panel-heading" data-toggle="collapse" data-target="#service4">
-                                <h4 class="panel-title"><a data-toggle="collapse" data-target="#service4" href="#service4">Services Details</a></h4>
+                                <h4 class="panel-title"><a data-toggle="collapse" data-target="#service4" href="#service4">Address Details</a></h4>
+                                <hr>
                               </div>
 
                       <div id="service4" class="panel-collapse fade collapse show">
                         <div class="panel-body">
-                         <div class="row stoppaddignleft stoppaddignright">
-                    		<div id="collapse4" class="panel-collapse fade collapse show">
-                        <div class="panel-body">
-                         <div class="row stoppaddignleft stoppaddignright">
-                        	
-	                        <div class="col-md-6 stoppaddignleft">
-		                        <div class="form-group field-company required">
-									<label class="control-label" for="company">Company Name</label>
-									<select id="company" class="form-control" name="company_name" aria-required="true">
-									<option value="">Select...</option>
-									</select>
+                        	<!-- Service section -->
+                    	 	<!-- <div class="row stoppaddignleft stoppaddignright">
+		                        <div class="col-md-2 stoppaddignleft">
+		                            <div class="form-group field-subscriber-is_roaming">
+										<label class="control-label">NAS Binding</label>
+										<input type="hidden" name="Subscriber[is_roaming]" value=""><div id="subscriber-is_roaming"><label><input type="radio" name="nas_binding" value="1"> yes</label>
+										<label><input type="radio" name="nas_binding" value="0" checked=""> No</label></div>
+
+										<div class="help-block"></div>
+									</div>  
+		                        </div>
+		                        <div class="col-md-2 stoppaddignleft">
+			                        <div class="form-group field-subscriber-bind_macaddress">
+										<label class="control-label">MAC Binding</label>
+										<input type="hidden" name="Subscriber[bind_macaddress]" value=""><div id="subscriber-bind_macaddress"><label><input type="radio" name="mac_binding" value="1" checked=""> yes</label>
+										<label><input type="radio" name="mac_binding" value="0"> No</label></div>
+
+										<div class="help-block"></div>
+									</div>  
+		                        </div>
+		                        <div class="col-md-2 stoppaddignleft stoppaddignright">
+		                            <div class="form-group field-subscriber-is_autorenew">
+										<label class="control-label">Autorenew</label>
+										<input type="hidden" name="Subscriber[is_autorenew]" value=""><div id="subscriber-is_autorenew"><label><input type="radio" name="autorenew" value="1"> yes</label>
+										<label><input type="radio" name="autorenew" value="0" checked=""> No</label></div>
+
+										<div class="help-block"></div>
+									</div>  
+		                        </div>
+		                    </div> -->
+		                    <!-- <div class="row stoppaddignleft stoppaddignright">
+		                        <div class="col-md-4 stoppaddignleft">
+		                            <div class="form-group field-subscriber-gst_number">
+										<label class="control-label" for="subscriber-gst_number">GST Number</label>
+										<input type="text" id="subscriber-gst_number" class="form-control rounded" name="gst_number" autocomplete="off">
+
+										<div class="help-block"></div>
+									</div>                        
+								</div>
+		                   	</div> -->
+		                    <div class="row stoppaddignleft stoppaddignright">
+		                        <div class="col-md-6 stoppaddignleft">
+		                            <div class="form-group field-subscriber-address required">
+										<label class="control-label" for="subscriber-address">Installation Address</label>
+										<textarea id="subscriber-address" class="form-control rounded" name="install_address" maxlength="500" aria-required="true" > </textarea>
+
+										<div class="help-block"></div>
+										</div>                       
+									</div>
+		                        <div class="col-md-6 stoppaddignleft stoppaddignright">
+		                            <div class="form-group field-subscriber-billing_address">
+										<label class="control-label" for="subscriber-billing_address">Billing Address</label>
+										<textarea id="subscriber-billing_address" class="form-control rounded" name="bill_address" maxlength="500"></textarea>
+
+										<div class="help-block"></div>
+										</div>               
+						            </div>
+		                    </div>
+		                    <div class="row stoppaddignleft stoppaddignright">
+		                        <div class="col-md-12 stoppaddignleft">
+		                            <div class="form-group field-subscriber-permanent_address">
+										<label class="control-label" for="subscriber-permanent_address">Permanent Address</label>
+										<textarea id="subscriber-permanent_address" class="form-control rounded" name="permanent_address" maxlength="500"></textarea>
+
+										<div class="help-block"></div>
+									</div>                        
+								</div>
+		                        <!-- <div class="col-md-6 stoppaddignleft stoppaddignright">
+		                            <div class="form-group field-subscriber-subscriber_details">
+									<label class="control-label" for="subscriber-subscriber_details">Subscriber Details</label>
+									<textarea id="subscriber-subscriber_details" class="form-control rounded" name="subscriber_details" maxlength="500"></textarea>
 
 									<div class="help-block"></div>
-								</div>                        
-							</div>
-	                        <div class="col-md-3 stoppaddignleft">
-	                        	<div class="form-group field-subscriber-special_discount">
-									<label class="control-label" for="subscriber-special_discount">Special Discount</label>
-									<input type="text" id="subscriber-special_discount" class="form-control rounded" name="discount" value="0">
-
-									<div class="help-block"></div>
-								</div>                        
-							</div>
-	                        <div class="col-md-3 stoppaddignleft">
-	                        	<div class="form-group field-subscriber-service_type">
-									<label class="control-label" for="subscriber-service_type">Service Type</label>
-									<select id="subscriber-service_type" class="form-control" name="service_type">
-									<option value="3">Regular Customer</option>
-									<option value="2">Postpaid Customer</option>
-									<option value="1">Prepaid Customer</option>
-									</select>
-
-									<div class="help-block"></div>
-								</div>                        
-							</div>
-	                    </div>
-	                    <div class="row stoppaddignleft stoppaddignright">
-	                        <div class="col-md-6 stoppaddignleft">
-	                        	<div class="form-group field-company required">
-									<label class="control-label" for="companys">Service</label>
-									<select id="companys" class="form-control" name="service_new" aria-required="true">
-									<?php foreach ($subscriber as $author): ?>
-									<option value="<?=$author->service_id?>"><?=$author->service_name?></option>
-									<?php endforeach;?>
-									</select>
-
-									<div class="help-block"></div>
-								</div>                        
-							</div>
-	                        <div class="col-md-3 stoppaddignleft">
-	                        <div class="form-group field-subscriber-service_type">
-								<label class="control-label" for="subscriber-service_typ">Next Renewal Service</label>
-								<select id="subscriber-service_typ" class="form-control" name="next_renewal">
-								<?php foreach ($subscriber as $author): ?>
-								<option value="<?=$author->service_id?>"><?=$author->service_name?></option>
-								<?php endforeach;?>
-								</select>
-
-								<div class="help-block"></div>
-								</div>                        
-							</div>
-
-						<div class="col-md-3 stoppaddignleft">
-	                        <div class="form-group field-subscriber-service_type">
-								<label class="control-label" for="subscriber-servi">Assign To Employee</label>
-								<select id="subscriber-servi" class="form-control" name="manager">
-								<?php
-									foreach ($employees as $emp ) {
-										// echo $emp->user_name;
-										echo '<option value="'.$emp->id.'">'.$emp->first_name.' '.$emp->last_name.'</option>';
-									}
-								?>
-								<!-- <option value="1">Admin</option>
-								<option value="2">Sadhnagar</option>
-								<option value="3">Mahavir</option> -->
-								</select>
-
-								<div class="help-block"></div>
-								</div>                        
-							</div>
-
-						<div class="col-md-3 stoppaddignleft">
-	                        <div class="form-group field-subscribe">
-							<label class="control-label" for="subscriber-specia">Idle Timeout</label>
-							<input type="text" id="subscriber-specia" class="form-control rounded" name="idle_timeout" value="600">
-
-							<div class="help-block"></div>
-							</div>                        
-						</div>
-
-	                <div class="col-md-3 stoppaddignleft">
-	                <div class="form-group field-subscriber-special_discount">
-	                    <label class="control-label" for="subscribe">Simultaneous Use</label>
-	                    <input type="text" id="subscribe" class="form-control rounded" name="simult" value="1">
-
-	                    <div class="help-block"></div>
-	                    </div> 
-	                </div>
-	                    <div class="col-md-3 stoppaddignleft">
-	                        <div class="form-group field-subscriber-special_discount">
-	                            <label class="control-label">IP Address Mode</label>
-	                            <select id="IPAddress" class="form-control" name="ipmode">
-	                                <option value="NAS Pool" id="nas">Nas Pool</option>
-	                                <option value="Static IP" id="static">Static Ip</option>
-	                            </select>
-	                            <input type="text" id="wanIp" class="form-control rounded" placeholder="wan Ip" name="wanIp" style="display: none;">
-	                            <input type="text" id="LanIp" class="form-control rounded" placeholder="Lan Ip" name="LanIp" style="display: none;">
-	                            <div class="help-block"></div>
-	                        </div>                        
-	                    </div>
-	                    </div>
-
-	                    <div class="row stoppaddignleft stoppaddignright">
-	                        <div class="col-md-4 stoppaddignleft">
-	                        <div class="form-group field-areas required">
-	                        <label class="control-label" for="areas">Area Name</label>
-	                        <select id="areas" class="form-control rounded" name="area_name" onchange="" aria-required="true">
-	                        <option value="">Select...</option>
-	                        </select>
-
-								<div class="help-block"></div>
-								</div>                        </div>
-								                        <div class="col-md-4 stoppaddignleft">
-								                        <div class="form-group field-locations required">
-								<label class="control-label" for="locations">Location Name</label>
-								<select id="locations" class="form-control  rounded" name="location_name" onchange="  " aria-required="true">
-								<option value="">Select...</option>
-								</select>
-
-								<div class="help-block"></div>
-								</div>                        </div>
-								                        <div class="col-md-4 stoppaddignleft stoppaddignright">
-								                        <div class="form-group field-buildings required">
-								<label class="control-label" for="buildings">Building Name</label>
-								<select id="buildings" class="form-control rounded" name="building_name" aria-required="true">
-								<option value="">Select...</option>
-								</select>
-
-								<div class="help-block"></div>
-				                     </div>
-				                    </div> 
-	                        </div>
-                      
-                   		
-                        </div>
-                      </div>
-                      
-                    	 </div>
+									</div>     
+		                   		</div> -->
+		                    </div>
                         </div>
                       </div>
                   </div>
@@ -353,54 +368,24 @@ a:hover {
 
 
    <!--------------Billing details---->
-                 <div class="card" >
+                <!-- <div class="card" >
                     <div class="card-body">
                         <div class="panel-group" id="accordion1">
-
-                            <!-- panel1  -->
+                            panel1 
                             <div class="panel panel-default" id="panel4">
                               <div class="panel-heading" data-toggle="collapse" data-target="#collapse4">
                                 <h4 class="panel-title"><a data-toggle="collapse" data-target="#collapse4" href="#collapse4">Billing Dates Details</a></h4>
                               </div>
 
-                      <div id="collapse4" class="panel-collapse fade collapse show">
-                        <div class="panel-body">
-                         <div class="row stoppaddignleft stoppaddignright">
-                        <div class="col-md-4 stoppaddignleft">
-                            <div class="form-group field-subscriber-permanent_address required">
-								<label class="control-label" for="start_date">Start Date</label>
-								<input type="date" id="start_date" class="form-control rounded" name="start_date" autocomplete="off">
-
-
-								<div class="help-block"></div>
-							</div>                        
-						</div>
-                        <div class="col-md-4 stoppaddignleft stoppaddignright">
-                            <div class="form-group field-subscriber-subscriber_details required">
-							<label class="control-label" for="end_date">End Date</label>
-							<input type="date" id="end_date" class="form-control rounded" name="end_date" autocomplete="off">
-
-
-							<div class="help-block"></div>
-							</div>     
-                   		</div>
-                   		<div class="col-md-4 stoppaddignleft stoppaddignright">
-                            <div class="form-group field-subscriber-permanent_address required">
-								<label class="control-label" for="due_date">Due Date</label>
-								<input type="date" id="due_date" class="form-control rounded" name="due_date" autocomplete="off">
-
-
-								<div class="help-block"></div>
-							</div>                        
-						</div>
-                      
-                    </div>
-                        </div>
-                      </div>
-                  </div>
-                </div>
-            </div>
-        </div>
+		                      <div id="collapse4" class="panel-collapse fade collapse show">
+		                        <div class="panel-body">
+		                    
+		                        </div>
+		                      </div>
+		                  </div>
+		                </div>
+		            </div>
+		        </div> -->
 
 	</div>
             <div class="col-md-6">                        
@@ -411,107 +396,243 @@ a:hover {
                             <!-- panel1  -->
                             <div class="panel panel-default" id="panel3">
                               <div class="panel-heading" data-toggle="collapse" data-target="#collapse3">
-                                <h4 class="panel-title"><a data-toggle="collapse" data-target="#collapse3" href="#collapse3">Address Details</a></h4>
+                                <h4 class="panel-title"><a data-toggle="collapse" data-target="#collapse3" href="#collapse3">Service  Details</a></h4>
+                                <hr>
                               </div>
 
                       <div id="collapse3" class="panel-collapse fade collapse show">
                         <div class="panel-body">
-                        
+                        	<!-- address details -->
+							<div class="row stoppaddignleft stoppaddignright">
+	                    		<div id="collapse4" class="panel-collapse fade collapse show">
+			                        <div class="panel-body">
+				                        <div class="row stoppaddignleft stoppaddignright">
+					                        <div class="col-md-6 stoppaddignleft">
+						                        <div class="form-group field-company required">
+													<label class="control-label" for="company">Company Name</label>
+													<select id="company" class="form-control" name="company_name" aria-required="true">
+													<option value="">Select...</option>
+													<?php
+														foreach ($companies as $comp) {
+															echo '<option value="'.$comp->comp_id.'">'.$comp->comp_name.'</option>';
+														}
+													?>
+													</select>
 
-<div class="row stoppaddignleft stoppaddignright">
-                        <div class="col-md-2 stoppaddignleft">
-                            <div class="form-group field-subscriber-is_roaming">
-<label class="control-label">NAS Binding</label>
-<input type="hidden" name="Subscriber[is_roaming]" value=""><div id="subscriber-is_roaming"><label><input type="radio" name="nas_binding" value="1"> yes</label>
-<label><input type="radio" name="nas_binding" value="0" checked=""> No</label></div>
+													<div class="help-block"></div>
+												</div>                        
+											</div>
+					                        <div class="col-md-3 stoppaddignleft">
+					                        	<div class="form-group field-subscriber-special_discount">
+													<label class="control-label" for="subscriber-special_discount">Special Discount</label>
+													<input type="text" id="subscriber-special_discount" class="form-control rounded" name="discount" value="0">
 
-<div class="help-block"></div>
-</div>  
-                        </div>
-                        <div class="col-md-2 stoppaddignleft">
-                        <div class="form-group field-subscriber-bind_macaddress">
-<label class="control-label">MAC Binding</label>
-<input type="hidden" name="Subscriber[bind_macaddress]" value=""><div id="subscriber-bind_macaddress"><label><input type="radio" name="mac_binding" value="1" checked=""> yes</label>
-<label><input type="radio" name="mac_binding" value="0"> No</label></div>
+													<div class="help-block"></div>
+												</div>                        
+											</div>
+					                        <div class="col-md-3 stoppaddignleft">
+					                        	<div class="form-group field-subscriber-service_type">
+													<label class="control-label" for="subscriber-service_type">Service Type</label>
+													<select id="subscriber-service_type" class="form-control" name="service_type">
+													<option value="3">Regular Customer</option>
+													<option value="2">Postpaid Customer</option>
+													<option value="1">Prepaid Customer</option>
+													</select>
 
-<div class="help-block"></div>
-</div>  
-                                                    </div>
-                                                <div class="col-md-2 stoppaddignleft stoppaddignright">
-                            <div class="form-group field-subscriber-is_autorenew">
-<label class="control-label">Autorenew</label>
-<input type="hidden" name="Subscriber[is_autorenew]" value=""><div id="subscriber-is_autorenew"><label><input type="radio" name="autorenew" value="1"> yes</label>
-<label><input type="radio" name="autorenew" value="0" checked=""> No</label></div>
+													<div class="help-block"></div>
+												</div>                        
+											</div>
+					                    </div>
+					                    <div class="row stoppaddignleft stoppaddignright">
+											<div class="col-md-6 stoppaddignleft">
+												<div class="form-group field-subscriber-opr_id required">
+													<label class="control-label" for="subscriber-opr_id">Partner</label>
+													<select id="subscriber-opr_id" class="form-control rounded" name="partner" onchange="" aria-required="true">
+														<option value="">Select Partner</option>
+														<option value="2">Antariksh</option>
+														<option value="3">Hriday</option>
+														<option value="4">Puran Nagar</option>
+														<option value="5">Manglapuri</option>
+														<option value="7">Rajnagar-2</option>
+														<option value="8">Rajnagar-1</option>
+														<option value="9">DOT</option>
+														<option value="10">Delhicantt</option>
+														<option value="11">Vikasnagar</option>
+														<option value="12">Pushpanjali</option>
+														<option value="13">Corporate</option>
+														<option value="14">Free</option>
+														<option value="15">Sagarpur</option>
+														<option value="16">Najafgarh</option>
+														<option value="17">Nanglidairy</option>
+														<option value="18">Kakrola</option>
+														<option value="19">Dwarka</option>
+														<option value="21">Mahavir</option>
+														<option value="22">Sadhnagar</option>
+														<option value="23">Rajnagar</option>
+														<option value="24">VipinGarden</option>
+														<option value="25">VikasPuri</option>
+														<option value="26">VashistPark</option>
+														<option value="27">VAISHALI</option>
+														<option value="28">UttamNagar</option>
+														<option value="29">RajoriGarden</option>
+														<option value="30">PochanPur</option>
+														<option value="31">PalamVillage</option>
+														<option value="32">NSP</option>
+														<option value="33">MehramNagar</option>
+														<option value="34">KrishnaPark</option>
+														<option value="35">KirtiNagar</option>
+														<option value="36">KanganHeri</option>
+														<option value="37">KailashPuri</option>
+														<option value="38">JankiPuri</option>
+														<option value="39">JanakPuri</option>
+														<option value="40">IndraPark</option>
+														<option value="41">GuruGram</option>
+														<option value="42">DurgaPark</option>
+														<option value="43">DashrathPuri</option>
+														<option value="44">BindaPur</option>
+														<option value="45">BagDola</option>
+														<option value="46">BijWasan</option>
+														<option value="47">KapasHera</option>
+														<option value="48">RajaPuri</option>
+														<option value="49">Shyam Vihar</option>
+														<option value="50">NasirPur</option>
+														<option value="51">VijayEnclave</option>
+														<option value="52">Goyladairy</option>
+														<option value="53">Shahabad</option>
+														<option value="54">Jagnnath Kumar</option>
+													</select>
 
-<div class="help-block"></div>
-</div>  
-                        </div>
-                    </div>
-                    
-                    <div class="row stoppaddignleft stoppaddignright">
-                        <div class="col-md-4 stoppaddignleft">
-                            <div class="form-group field-subscriber-gst_number">
-								<label class="control-label" for="subscriber-gst_number">GST Number</label>
-								<input type="text" id="subscriber-gst_number" class="form-control rounded" name="gst_number" autocomplete="off">
+													<div class="help-block"></div>
+												</div>                      
+											</div>
+					                        <div class="col-md-6 stoppaddignleft">
+						                        <div class="form-group field-rclients required">
+													<label class="control-label" for="rclients">Radius Client</label>
+													<select id="rclients" class="form-control rounded" name="radius_client" aria-required="true">
+													<option value="">Select...</option>
+													</select>
 
-								<div class="help-block"></div>
-								</div>                        
-						    </div>
-                        <div class="col-md-4 stoppaddignleft">
-                            <div class="form-group field-subscriber-aadhar_number">
-								<label class="control-label" for="subscriber-aadhar_number">Aadhar Number</label>
-								<input type="text" id="subscriber-aadhar_number" class="form-control rounded" name="aadhar_number" autocomplete="off"  onkeyup="limitlength(this,16)">
+													<div class="help-block"></div>
+												</div>                      
+											</div>
+				                    	</div>
+					                    <div class="row stoppaddignleft stoppaddignright">
+					                        <div class="col-md-6 stoppaddignleft">
+					                        	<div class="form-group field-company required">
+													<label class="control-label" for="companys">Service</label>
+													<select id="companys" class="form-control" name="service_new" aria-required="true">
+														<option value="0">Select</option>
+													<?php foreach ($services as $service): ?>
+													<option value="<?=$service->service_id?>"><?=$service->service_name?></option>
+													<?php endforeach;?>
+													</select>
 
-								<div class="help-block"></div>
-								</div>                       
-							 </div>
-                        <div class="col-md-4 stoppaddignleft stoppaddignright">
-                             <div class="form-group field-subscriber-pan_number">
-								<label class="control-label" for="subscriber-pan_number">PAN Number</label>
-								<input type="text" id="subscriber-pan_number" class="form-control rounded" name="pan_number" autocomplete="off">
+													<div class="help-block"></div>
+												</div>                        
+											</div>
+					                        <div class="col-md-3 stoppaddignleft">
+					                        	<div class="form-group field-subscriber-service_type">
+													<label class="control-label" for="subscriber-service_typ">Next Renewal Service</label>
+													<select id="subscriber-service_typ" class="form-control" name="next_renewal">
+														<option value="0">Select</option>
+													<?php foreach ($services as $service): ?>
+													<option value="<?=$service->service_id?>"><?=$service->service_name?></option>
+													<?php endforeach;?>
+													</select>
 
-								<div class="help-block"></div>
-								</div>                      
-						    </div>
-                   		</div>
-                    <div class="row stoppaddignleft stoppaddignright">
-                        <div class="col-md-6 stoppaddignleft">
-                            <div class="form-group field-subscriber-address required">
-								<label class="control-label" for="subscriber-address">Installation Address</label>
-								<textarea id="subscriber-address" class="form-control rounded" name="install_address" maxlength="500" aria-required="true"></textarea>
+													<div class="help-block"></div>
+												</div>                        
+											</div>
 
-								<div class="help-block"></div>
-								</div>                       
-							</div>
-                        <div class="col-md-6 stoppaddignleft stoppaddignright">
-                            <div class="form-group field-subscriber-billing_address">
-								<label class="control-label" for="subscriber-billing_address">Billing Address</label>
-								<textarea id="subscriber-billing_address" class="form-control rounded" name="bill_address" maxlength="500"></textarea>
+											<div class="col-md-3 stoppaddignleft">
+						                        <div class="form-group field-subscriber-service_type">
+													<label class="control-label" for="subscriber-servi">Assign To Employee</label>
+													<select id="subscriber-servi" class="form-control" name="manager">
+														<option value="0">Select</option>
+													<?php
+														foreach ($employees as $emp ) {
+															// echo $emp->user_name;
+															echo '<option value="'.$emp->id.'">'.$emp->first_name.' '.$emp->last_name.'</option>';
+														}
+													?>
+													<!-- <option value="1">Admin</option>
+													<option value="2">Sadhnagar</option>
+													<option value="3">Mahavir</option> -->
+													</select>
 
-								<div class="help-block"></div>
-								</div>               
-				            </div>
-                    </div>
-                    <div class="row stoppaddignleft stoppaddignright">
-                        <div class="col-md-6 stoppaddignleft">
-                            <div class="form-group field-subscriber-permanent_address">
-								<label class="control-label" for="subscriber-permanent_address">Permanent Address</label>
-								<textarea id="subscriber-permanent_address" class="form-control rounded" name="permanent_address" maxlength="500"></textarea>
+													<div class="help-block"></div>
+												</div>                        
+											</div>
 
-								<div class="help-block"></div>
-							</div>                        
-						</div>
-                        <div class="col-md-6 stoppaddignleft stoppaddignright">
-                            <div class="form-group field-subscriber-subscriber_details">
-							<label class="control-label" for="subscriber-subscriber_details">Subscriber Details</label>
-							<textarea id="subscriber-subscriber_details" class="form-control rounded" name="subscriber_details" maxlength="500"></textarea>
+											<div class="col-md-3 stoppaddignleft">
+						                        <div class="form-group field-subscribe">
+												<label class="control-label" for="subscriber-specia">Idle Timeout</label>
+												<input type="text" id="subscriber-specia" class="form-control rounded" name="idle_timeout" value="600">
 
-							<div class="help-block"></div>
-							</div>     
-                   		</div>
-                    </div>
-              
-                        </div>
+												<div class="help-block"></div>
+												</div>                        
+											</div>
+
+							                <div class="col-md-3 stoppaddignleft">
+								                <div class="form-group field-subscriber-special_discount">
+								                    <label class="control-label" for="subscribe">Simultaneous Use</label>
+								                    <input type="text" id="subscribe" class="form-control rounded" name="simult" value="1">
+
+								                    <div class="help-block"></div>
+							                    </div> 
+							                </div>
+						                    <div class="col-md-6 stoppaddignleft">
+						                        <div class="form-group field-subscriber-special_discount">
+						                            <label class="control-label">IP Address Mode</label>
+						                            <select id="IPAddress" class="form-control" name="ipmode">
+						                                <option value="NAS Pool" id="nas">Nas Pool</option>
+						                                <option value="Static IP" id="static">Static Ip</option>
+						                            </select>
+						                            <input type="text" id="wanIp" class="form-control rounded" placeholder="wan Ip" name="wanIp" style="display: none;">
+						                            <input type="text" id="LanIp" class="form-control rounded" placeholder="Lan Ip" name="LanIp" style="display: none;">
+						                            <div class="help-block"></div>
+						                        </div>                        
+						                    </div>
+					                    </div>
+
+				                    <!-- <div class="row stoppaddignleft stoppaddignright">
+				                        <div class="col-md-4 stoppaddignleft">
+				                        	<div class="form-group field-areas required">
+					                        	<label class="control-label" for="areas">Area Name</label>
+						                        <select id="areas" class="form-control rounded" name="area_name" onchange="" aria-required="true">
+						                        <option value="">Select...</option>
+						                        </select>
+
+												<div class="help-block"></div>
+											</div>                        
+										</div>
+				                        <div class="col-md-4 stoppaddignleft">
+				                        	<div class="form-group field-locations required">
+												<label class="control-label" for="locations">Location Name</label>
+												<select id="locations" class="form-control  rounded" name="location_name" onchange="  " aria-required="true">
+												<option value="">Select...</option>
+												</select>
+
+												<div class="help-block"></div>
+											</div>                        
+										</div>
+				                        <div class="col-md-4 stoppaddignleft stoppaddignright">
+				                        	<div class="form-group field-buildings required">
+												<label class="control-label" for="buildings">Building Name</label>
+												<select id="buildings" class="form-control rounded" name="building_name" aria-required="true">
+												<option value="">Select...</option>
+												</select>
+
+												<div class="help-block"></div>
+							                </div>
+							            </div> 
+				                    </div> -->
+                      
+                   		
+						            </div>
+						        </div>
+                    	 	</div>
+                		</div>
                       </div>
                   </div>
                 </div>
@@ -527,81 +648,49 @@ a:hover {
                     <!-- panel1  -->
                     <div class="panel panel-default active" id="panel5">
                       <div class="panel-heading" data-toggle="collapse" data-target="#collapse5">
-                        <h4 class="panel-title"><a data-toggle="collapse" data-target="#collapse5" href="#collapse5">Login Details</a></h4>
+                        <h4 class="panel-title"><a data-toggle="collapse" data-target="#collapse5" href="#collapse5">Plan Details</a></h4>
+                        <hr>
                       </div>
 
 			            <div id="collapse5" class="panel-collapse fade collapse show">
 			                <div class="panel-body">
-			              
-					          <div class="row stoppaddignleft stoppaddignright">
-                        <div class="col-md-3 stoppaddignleft">
-                            <div class="form-group field-subscriber-username required">
-                                <label class="control-label" for="subscriber-username">Username</label>
-                                <input type="text" id="subscriber-username" class="form-control rounded" name="username" aria-required="true">
+					            <div class="row stoppaddignleft stoppaddignright">
+			                        <div class="col-md-4 stoppaddignleft">
+			                            <div class="form-group field-subscriber-permanent_address required">
+											<label class="control-label" for="start_date">Start Date</label>
+											<input type="date" id="start_date" class="form-control rounded" name="start_date" autocomplete="off">
 
-                                <div class="help-block"></div>
-                            </div>                           
-                        </div>
-                        <div class="col-md-3 stoppaddignleft">
-                            <div class="form-group field-subscriber-password required">
-                                <label class="control-label" for="subscriber-password">Password</label>
-                                <input type="password" id="subscriber-password" class="form-control rounded" name="password"  aria-required="true">
 
-                                <div class="help-block"></div>
-                            </div>                           
-                        </div>
-                        <div class="col-md-3 stoppaddignleft">
-                            <div class="form-group field-subscriber-password_repeat required">
-                            <label class="control-label" for="subscriber-password_repeat">Confirm password</label>
-                            <input type="password" id="subscriber-password_repeat" class="form-control rounded" name="Subscriber[password_repeat]" aria-required="true">
+											<div class="help-block"></div>
+										</div>                        
+									</div>
+			                        <div class="col-md-4 stoppaddignleft stoppaddignright">
+			                            <div class="form-group field-subscriber-subscriber_details required">
+										<label class="control-label" for="end_date">End Date</label>
+										<input type="date" id="end_date" class="form-control rounded" name="end_date" autocomplete="off">
 
-                            <div class="help-block"></div>
-                            </div>                            
-                        </div>
-					    <div class="col-md-3 stoppaddignleft stoppaddignright">
-					        <div class="form-group field-subscriber-portal_password required">
-					        <label class="control-label" for="subscriber-portal_password">Portal Password</label>
-					        <input type="password" id="subscriber-portal_password" class="form-control rounded" name="portal_password" aria-required="true">
 
-					        <div class="help-block"></div>
-					        </div>
-					    </div>
-					</div>
-                    <div class="row stoppaddignleft stoppaddignright">
-                        <div class="col-md-4 stoppaddignleft">
-	                        <div class="form-group field-subscriber-mobile_number required has-error">
-								<label class="control-label" for="subscriber-mobile_number">Mobile Number</label>
-								<input type="text" id="subscriber-mobile_number" class="form-control" name="mobile"  pattern="[0-9]{10}" maxlength="10" title="number only">
+										<div class="help-block"></div>
+										</div>     
+			                   		</div>
+			                   		<div class="col-md-4 stoppaddignleft stoppaddignright">
+			                            <div class="form-group field-subscriber-permanent_address required">
+											<label class="control-label" for="due_date">Due Date</label>
+											<input type="date" id="due_date" class="form-control rounded" name="due_date" autocomplete="off">
 
-								<div class="help-block " style="display: none">Mobile Number cannot be blank.</div>
-							</div>                      
-						</div>
-                        <div class="col-md-4 stoppaddignleft">
-	                        <div class="form-group field-subscriber-alternate_mobile_number">
-								<label class="control-label" for="subscriber-alternate_mobile_number">Alternate Mobile Number</label>
-								<input type="text" id="subscriber-alternate_mobile_number" class="form-control rounded" name="alternate_mobile" pattern="[0-9]{10}" maxlength="10" title="number only" >
 
-								<div class="help-block"></div>
-							</div>                      
-					    </div>
-                        <div class="col-md-4 stoppaddignleft stoppaddignright">
-                        	<div class="form-group field-subscriber-contact_number">
-								<label class="control-label" for="subscriber-contact_number">Contact Number</label>
-								<input type="text" id="subscriber-contact_number" class="form-control rounded" name="contact_number"  pattern="[0-9]{10}" maxlength="10" title="number only">
-
-								<div class="help-block"></div>
-							</div>                       
-						</div>
-                    </div>
-
-                    <div class="row stoppaddignleft stoppaddignright">
-			            <div class="form-group field-subscriber-email_id required col-12" >
-							<label class="control-label" for="subscriber-email_id">Email ID</label>
-							<input type="email" id="subscriber-email_id" class="form-control" name="email" aria-required="true">
-
-							<div class="help-block"></div>
-						</div>                    
-					</div>                  
+											<div class="help-block"></div>
+										</div>                        
+									</div>
+			                    </div> 
+			                    <div class="row">
+			                    	<div class="col-lg-12">
+			                    		<div class="text-center">  
+			                    			<button type="submit" class="btn btn-primary" name="Frm_User">Add User</button>
+			                    			<button type="submit" class="btn btn-secondary" name="Frm_User">Update User</button>
+                    					</div>
+			                    	</div>
+			                    </div>
 				           	</div>
 			            </div>                                                 
             		</div>                                                 
@@ -614,11 +703,7 @@ a:hover {
 
                   </div><br>
 
-                  <div class="text-center">  
-
-                        <button type="submit" class="btn btn-primary" name="Frm_User">Submit</button>
-
-                    </div>
+                  
                 </form>
 
                 <div style="clear:both"></div>

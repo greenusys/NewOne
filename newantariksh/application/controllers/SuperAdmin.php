@@ -7,6 +7,14 @@ class SuperAdmin extends CI_Controller
     {
         parent::__construct();
         $this->load->model('Superadmin_model','Superadmin');
+        $this->load->model('ServiceModel');
+        $this->load->model('CompanyModel');
+        // $this->load->model('PartnerModel');
+        // $this->load->model('FranchiseModel');
+        $this->load->model('EmployeeModel');
+        $this->load->model('Permission');
+        $this->load->model('UserRoleModel');
+        $this->load->model('UserMode');
     }
     public function index()
     {
@@ -38,8 +46,7 @@ class SuperAdmin extends CI_Controller
 
     public function viewPermission()
     {
-        $this->load->model('Permission');
-        $this->load->model('UserRoleModel');
+        
         $data['rights']=$this->Permission->getAllPermission();
         $data['roles']=$this->UserRoleModel->getAllUserRole();
         // print_r($data['roles']);
@@ -88,7 +95,7 @@ class SuperAdmin extends CI_Controller
     }
     public function showUser()
     {
-        $this->load->model('UserMode');
+        
         // $data['users']=$this->UserMode->fetchAllUser();
         $config = array();
         $config["base_url"] = base_url() . "index.php/SuperAdmin/showUser";
@@ -108,9 +115,18 @@ class SuperAdmin extends CI_Controller
         $this->load->view('template/footer');
 
     }
+
     public function addUserSection()
     {
 
+        $data['services']=$this->ServiceModel->getAllServices();
+        $data['employees']=$this->EmployeeModel->getAllEmployees();
+        $data['companies']=$this->CompanyModel->getAllCompany();
+        // $data['Partner']=;
+        // $data['Franchise']=;
+        $this->load->view('SuperAdmin/Template/header');
+        $this->load->view('SuperAdmin/Home/createUser',$data);
+        $this->load->view('SuperAdmin/Template/setting_bar');
     }   
     public function showRoles(){
         $this->load->view('SuperAdmin/Template/header');
