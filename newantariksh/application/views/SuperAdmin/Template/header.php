@@ -225,8 +225,8 @@
                                 
                                 
                                 
-                                <li class="sidebar-item"><a href="<?=base_url('index.php/Superadmin/showAdmin')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu">Show Admin </span></a></li>
-                                <li class="sidebar-item"><a href="<?=base_url('index.php/Superadmin/createAdmin')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu">Add Admin </span></a></li>
+                                <li class="sidebar-item"><a href="<?=site_url('SuperAdmin/showAdmin')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu">Show Admin </span></a></li>
+                                <li class="sidebar-item"><a href="<?=site_url('SuperAdmin/createAdmin')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu">Add Admin </span></a></li>
                                 
                               
                             </ul>
@@ -235,31 +235,39 @@
                      <li class="nav-small-cap"><i class="mdi mdi-dots-horizontal"></i> <span class="hide-menu">Company</span></li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-collage"></i><span class="hide-menu">Company</span></a>
                             <ul aria-expanded="false" class="collapse first-level">
-                                 <li class="sidebar-item"><a href="<?=base_url('index.php/Superadmin/createCompany')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu">Show Company </span></a></li>
-                                <li class="sidebar-item"><a href="<?=base_url('index.php/Superadmin/showCompany')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu">Add Company</span></a></li>
+                                 <li class="sidebar-item"><a href="<?=site_url('SuperAdmin/createCompany')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu">Add Company </span></a></li>
+                                <li class="sidebar-item"><a href="<?=site_url('SuperAdmin/showCompany')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu">Show Company</span></a></li>
                                 
                              </ul>
                         </li>  
                         <li class="nav-small-cap"><i class="mdi mdi-dots-horizontal"></i> <span class="hide-menu">User</span></li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-collage"></i><span class="hide-menu">User</span></a>
                             <ul aria-expanded="false" class="collapse first-level">
-                                 <li class="sidebar-item"><a href="<?=base_url('index.php/Location')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu">Show User </span></a></li>
-                                <li class="sidebar-item"><a href="<?=base_url('index.php/Location/state')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu">Add User</span></a></li>
+                                 <li class="sidebar-item"><a href="<?=site_url('SuperAdmin/showUser')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu">Show User </span></a></li>
+                                <li class="sidebar-item"><a href="<?=site_url('SuperAdmin/addUserSection')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu">Add User</span></a></li>
                                 
                              </ul>
                         </li>
                         <li class="nav-small-cap"><i class="mdi mdi-dots-horizontal"></i> <span class="hide-menu">Permission</span></li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-collage"></i><span class="hide-menu">Permission</span></a>
                             <ul aria-expanded="false" class="collapse first-level">
-                                 <li class="sidebar-item"><a href="<?=base_url('index.php/SuperAdmin/viewPermission')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu">Show Permission </span></a></li>
+                                 <li class="sidebar-item"><a href="<?=site_url('SuperAdmin/viewPermission')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu">Show Permission </span></a></li>
                                 <!-- <li class="sidebar-item"><a href="<?=base_url('index.php/Location/state')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu">Add Permission</span></a></li> -->
                                 
                              </ul>
-                        </li>   
+                        </li>  
+                        <li class="nav-small-cap"><i class="mdi mdi-dots-horizontal"></i> <span class="hide-menu">Roles</span></li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-collage"></i><span class="hide-menu">Roles</span></a>
+                            <ul aria-expanded="false" class="collapse first-level">
+                                <li class="sidebar-item"><a href="<?=site_url('SuperAdmin/showRoles')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu">Show Roles</span></a></li>
+                                <li class="sidebar-item"><a href="<?=site_url('SuperAdmin/adViewRoles')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu">Add Roles</span></a></li>
+                             </ul>
+                        </li> 
+
                          <li class="nav-small-cap"><i class="mdi mdi-dots-horizontal"></i> <span class="hide-menu">Setting</span></li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-collage"></i><span class="hide-menu">Setting</span></a>
                             <ul aria-expanded="false" class="collapse first-level">
-                                <li class="sidebar-item"><a href="<?=base_url('index.php/Location')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu">Page Setting</span></a></li>
+                                <li class="sidebar-item"><a href="<?=site_url('index.php/Location')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu">Page Setting</span></a></li>
                              </ul>
                         </li>  
                        

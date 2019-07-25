@@ -7,7 +7,7 @@
             <div class="page-breadcrumb">
                 
                 <div class="row" id="divCreatePlan" >
-                    <div class="col-lg-6 offset-lg-3">
+                    <div class="col-lg-8 offset-lg-2">
                         <div class="card  p-5">
                             <?php
                                 if($this->session->flashdata('msg'))
@@ -17,39 +17,55 @@
                             ?>
                            <form action="<?=base_url('index.php/Superadmin/addCompany')?>" method="post">
                                <h3 class="text-center">Create Company</h3>
-                                   <div class="col-lg-12">
+                               <hr>
+                               <div class="row">
+                                   <div class="col-lg-6">
                                        <label>Company Name<span class="text-danger">*</span></label>
                                        <Input type="text" name="companyname" placeholder="Enter Your Company Name" class="form-control" required>
                                    </div><br>
-                                   <div class="col-lg-12">
+                                   <div class="col-lg-6">
                                        <label>Username<span class="text-danger">*</span></label>
                                        <Input type="text" name="username" placeholder="Enter Your username" class="form-control" required>
-                                   </div><br>
-                                   <div class="col-lg-12">
+                                   </div> 
+                               </div>
+                               <div class="row">
+                                   <div class="col-lg-6">
                                        <label>Password<span class="text-danger">*</span></label>
                                        <Input type="Password" name="password" placeholder="Enter Your Password" class="form-control" required>
                                    </div><br>
 
-                                   <div class="col-lg-12">
+                                   <div class="col-lg-6">
                                        <label>Company Address <span class="text-danger">*</span></label>
                                         <Input type="text" name="companyadd" placeholder="Enter Your Company Address" class="form-control" required>
-                                   </div><br>
-                                   <div class="col-lg-12">
+                                   </div></div>
+                                   <div class="row">
+                                   <div class="col-lg-6">
                                        <label>Company Mobile No<span class="text-danger">*</span></label>
                                        <Input type="text" name="companymob" placeholder="Enter Your Company Mobile Number" pattern="[0-9]*" max-length="10" min-length="10" title="Invalid Input" class="form-control" required>
                                    </div><br>
-                                   <div class="col-lg-12">
+                                   <div class="col-lg-6">
                                        <label>Company Area<span class="text-danger">*</span></label>
                                        <Input type="text" name="companyarea" placeholder="Enter Your Company Area" class="form-control" required>
-                                   </div><br>
-                                   <div class="col-lg-12">
+                                   </div></div>
+                                   <div class="row">
+                                   <div class="col-lg-6">
                                        <label>GSTN Area<span class="text-danger">*</span></label>
                                        <Input type="text" name="gstn" placeholder="Enter Your GST Number" class="form-control" required>
                                    </div><br>
-                                   <div class="col-lg-12">
+                                   <div class="col-lg-6">
                                        <label>PAN<span class="text-danger">*</span></label>
                                        <Input type="text" name="pan" placeholder="Enter Your Pan Number" class="form-control" required>
-                                   </div><br>
+                                   </div></div>
+                                   <div class="row">
+                                     <div class="col-lg-6">
+                                       <label>Installation Address<span class="text-danger">*</span></label>
+                                       <Input type="text" name="install_add" placeholder="Enter Your Installation Address" class="form-control" utocomplete="off">
+                                    </div>
+                                    <div class="col-lg-6">
+                                       <label>Correspondance Address<span class="text-danger">*</span></label>
+                                       <Input type="text" name="corres_add" placeholder="Enter Your Alternate Address" class="form-control" utocomplete="off">
+                                    </div>
+                                    </div>
                                    <div class="col-lg-12">
                                         <label>Assign Pemission <span class="text-danger">*</span></label><br>
                                         <div classs="row">
@@ -57,9 +73,9 @@
                                             foreach ($permissions as $key) 
                                             {
                                                 ?>
-                                                    <div class="col-lg-6">
+                                                   <!--  <div class="col-lg-6">
                                                         <input type="checkbox" name="permission[]" value="<?=$key->id?>"><span class="mr-4"><?=$key->name?></span>
-                                                    </div>
+                                                    </div> -->
                                                 <?php   
                                             }
                                             ?>
@@ -71,7 +87,7 @@
                                    <br>
                                <div class="text-center">
                             
-                                    <input type="submit" value="Insert"  class="btn btn-primary">';
+                                    <input type="submit" value="Create"  class="btn btn-primary">';
                                
                                </div>
                            </form>

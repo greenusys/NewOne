@@ -34,37 +34,37 @@
                         <div class="col-lg-6">
                            <label>Password<span class="text-danger">*</span></label>
                            <Input type="Password" name="password" placeholder="Enter Your Password" class="form-control" utocomplete="off" required>
-                        </div></div><br>
+                        </div></div>
                         <div class="row">
                          <div class="col-lg-6">
                            <label>Installation Address<span class="text-danger">*</span></label>
                            <Input type="text" name="install_add" placeholder="Enter Your Installation Address" class="form-control" utocomplete="off">
-                        </div><br>
+                        </div>
                         <div class="col-lg-6">
                            <label>Correspondance Address<span class="text-danger">*</span></label>
                            <Input type="text" name="corres_add" placeholder="Enter Your Alternate Address" class="form-control" utocomplete="off">
-                        </div><br>
+                        </div>
                         </div>
                         <div class="row">
 	                        <div class="col-lg-6">
 	                           <label>Contact No. 1<span class="text-danger">*</span></label>
 	                           <Input type="text" name="cont_no1" placeholder="Enter Contact No. 1" class="form-control" utocomplete="off">
-	                        </div><br>
+	                        </div>
 	                        <div class="col-lg-6">
 	                           <label>Contact Person 1<span class="text-danger">*</span></label>
 	                           <Input type="text" name="cont_person1" placeholder="Enter Contact Person 1" class="form-control" utocomplete="off">
                         	</div>
-                        </div><br>
+                        </div>
                         <div class="row">
 	                        <div class="col-lg-6">
 	                           <label>Contact No. 2<span class="text-danger">*</span></label>
 	                           <Input type="text" name="cont_no2" placeholder="Enter Contact No. 2" class="form-control" utocomplete="off">
-	                        </div><br>
+	                        </div>
 	                        <div class="col-lg-6">
 	                           <label>Contact Person 2<span class="text-danger">*</span></label>
 	                           <Input type="text" name="cont_person2" placeholder="Enter Contact Person 2" class="form-control" utocomplete="off">
                         	</div>
-                        </div><br>
+                        </div>
                         <div class="col-lg-12">
                             <label>Choose Company <span class="text-danger">*</span></label><br>
                             <div classs="row">

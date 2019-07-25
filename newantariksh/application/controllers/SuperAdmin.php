@@ -3,20 +3,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class SuperAdmin extends CI_Controller 
 {
-	function __construct()
+    function __construct()
     {
         parent::__construct();
         $this->load->model('Superadmin_model','Superadmin');
     }
-	public function index()
-	{
-		$this->load->view('SuperAdmin/Template/header');
-		$this->load->view('SuperAdmin/Home/index');
-		$this->load->view('SuperAdmin/Template/setting_bar');
-	}
-	public function createCompany()
+    public function index()
     {
-    	$data['permissions']=$this->db->get('permissions')->result();
+        $this->load->view('SuperAdmin/Template/header');
+        $this->load->view('SuperAdmin/Home/index');
+        $this->load->view('SuperAdmin/Template/setting_bar');
+    }
+    public function createCompany()
+    {
+        $data['permissions']=$this->db->get('permissions')->result();
         $this->load->view('SuperAdmin/Template/header');
         $this->load->view('SuperAdmin/Home/createCompany',$data);
         $this->load->view('template/footer');
@@ -38,14 +38,14 @@ class SuperAdmin extends CI_Controller
 
     public function viewPermission()
     {
-    	$this->load->model('Permission');
-    	$this->load->model('UserRoleModel');
-    	$data['rights']=$this->Permission->getAllPermission();
-    	$data['roles']=$this->UserRoleModel->getAllUserRole();
-    	// print_r($data['roles']);
-    	$this->load->view('SuperAdmin/Template/header');
+        $this->load->model('Permission');
+        $this->load->model('UserRoleModel');
+        $data['rights']=$this->Permission->getAllPermission();
+        $data['roles']=$this->UserRoleModel->getAllUserRole();
+        // print_r($data['roles']);
+        $this->load->view('SuperAdmin/Template/header');
         $this->load->view('SuperAdmin/Home/viewPermission',$data);
-        $this->load->view('template/footer');
+        $this->load->view('SuperAdmin/Template/setting_bar');
     }
     public function showAdmin()
     {
@@ -85,6 +85,38 @@ class SuperAdmin extends CI_Controller
             $this->session->set_flashdata('msg','Error Occured');
             redirect(base_url('index.php/Superadmin/createAdmin'));
         }
-    }		
+    }
+    public function showUser()
+    {
+        $this->load->model('UserMode');
+        // $data['users']=$this->UserMode->fetchAllUser();
+        $config = array();
+        $config["base_url"] = base_url() . "index.php/SuperAdmin/showUser";
+        $config["total_rows"] = $this->UserMode->get_count();
+        $config["per_page"] = 10;
+        $config["uri_segment"] = 3;
+
+        $this->pagination->initialize($config);
+
+        $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+
+        $data["links"] = $this->pagination->create_links();
+
+        $data['users'] = $this->UserMode->get_subscriber($config["per_page"], $page);
+        $this->load->view('SuperAdmin/Template/header');
+        $this->load->view('SuperAdmin/Home/userList',$data);
+        $this->load->view('template/footer');
+
+    }
+    public function addUserSection()
+    {
+
+    }   
+    public function showRoles(){
+        $this->load->view('SuperAdmin/Template/header');
+        $this->load->view('SuperAdmin/Home/index');
+        $this->load->view('SuperAdmin/Template/setting_bar');
+    }
+    public function adViewRoles(){}
 }
 ?>
