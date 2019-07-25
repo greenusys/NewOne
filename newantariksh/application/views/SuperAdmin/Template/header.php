@@ -259,8 +259,8 @@
                         <li class="nav-small-cap"><i class="mdi mdi-dots-horizontal"></i> <span class="hide-menu">Roles</span></li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-collage"></i><span class="hide-menu">Roles</span></a>
                             <ul aria-expanded="false" class="collapse first-level">
-                                <li class="sidebar-item"><a href="<?=site_url('SuperAdmin/showRoles')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu">Show Roles</span></a></li>
-                                <li class="sidebar-item"><a href="<?=site_url('SuperAdmin/adViewRoles')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu">Add Roles</span></a></li>
+                                <li class="sidebar-item"><a href="<?=site_url('SuperAdmin/showRoles')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu">Roles</span></a></li>
+                                <!-- <li class="sidebar-item"><a href="<?=site_url('SuperAdmin/adViewRoles')?>" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu">Add Roles</span></a></li> -->
                              </ul>
                         </li> 
 

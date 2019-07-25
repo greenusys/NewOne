@@ -129,8 +129,9 @@ class SuperAdmin extends CI_Controller
         $this->load->view('SuperAdmin/Template/setting_bar');
     }   
     public function showRoles(){
+        $data['roles']=$this->UserRoleModel->getAllUserRole();
         $this->load->view('SuperAdmin/Template/header');
-        $this->load->view('SuperAdmin/Home/index');
+        $this->load->view('SuperAdmin/Home/roles',$data);
         $this->load->view('SuperAdmin/Template/setting_bar');
     }
     public function adViewRoles(){}
