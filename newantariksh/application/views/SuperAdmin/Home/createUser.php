@@ -545,16 +545,7 @@ a:hover {
 										</div>                        
 									</div>
 			                    </div> 
-			                    <div class="row">
-
-			                    	<div class="col-lg-12">
-			                    		<hr>
-			                    		<div align="right">  
-			                    			<button type="submit" class="btn btn-primary" name="Frm_User">Add User</button>
-			                    			<button type="submit" class="btn btn-secondary" name="Frm_User">Update User</button>
-                    					</div>
-			                    	</div>
-			                    </div>
+			                   
 				           	</div>
 			            </div>                                                 
             		</div>                                                 
@@ -567,7 +558,16 @@ a:hover {
 
                   </div><br>
 
-                  
+                   <div class="row">
+
+			                    	<div class="col-lg-12">
+			                    		<hr>
+			                    		<div align="center">  
+			                    			<button type="submit" class="btn btn-primary" name="Frm_User">Add User</button>
+			                    			<button type="submit" class="btn btn-secondary" name="Frm_User">Update User</button>
+                    					</div>
+			                    	</div>
+			                    </div><br>
                 </form>
 
                 <div style="clear:both"></div>

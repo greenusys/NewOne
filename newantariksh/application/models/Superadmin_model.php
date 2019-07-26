@@ -6,9 +6,9 @@
     	{
     		
     		$this->db->where($data);
-            if(count($this->db->get('companyList')->result())==0)
+            if(count($this->db->get('companylist')->result())==0)
 			{
-				if($this->db->insert("companyList",$data))
+				if($this->db->insert("companylist",$data))
 	            {
 	                return true;
 	            }
@@ -43,6 +43,19 @@
 				return false;
 			}
             
+    	}
+    	public function updateCompany($data)
+    	{
+    		$this->db->where($data);
+    		$status=array( "status" =>1);
+    		if($this->db->update("companylist",$data))
+    		{
+    			return true;
+    		}
+    		else
+    		{
+    			return false;
+    		}
     	}
 	}	
 ?>
