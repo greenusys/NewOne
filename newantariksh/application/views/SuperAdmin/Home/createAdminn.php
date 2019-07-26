@@ -1,102 +1,105 @@
-
-        <div class="page-wrapper">
+<div class="page-wrapper">
             <!-- ============================================================== -->
             <!-- Bread crumb and right sidebar toggle -->
             <!-- ============================================================== -->
-            <div class="page-breadcrumb">
-               
-              
-                <div class="row" id="AllPlan" >
-                    <div class="col-lg-12">
-                        <div class="card p-2">
-                           <div class="card-body">
-                               <table class="table table-hover">
-                                   <thead class="thead-light">
-                                       <th class="text-center font-weight-bold">#</th>
-                                       <th class="text-center font-weight-bold">Admin Name</th>
-                                       <th class="text-center font-weight-bold">Email</th>
-                                       <th class="text-center font-weight-bold">Alternate Email</th>
-                                       <th class="text-center font-weight-bold">Password</th>
-                                       <th class="text-center font-weight-bold">Status</th>
-                                       
-                                   </thead>
-                                   <tbody id="allPlanData">
-                                      <?php
-                                       // print_r($complaints);
-                                      $i=1;
-                                        foreach ($admintable as $admin ) {
-                                            ?>
-                                                <tr>
-                                                    <td class="text-center"><?=$i?></td>
-                                                    <td class="text-center"><?=$admin->name?></td>
-                                                    <td class="text-center"><?=$admin->email?></td>
-                                                    <td class="text-center"><?=$admin->Alt_email?></td>
-                                                    <td class="text-center"><?=$admin->pass?></td>
-                                                    <td class="text-center">
-                                                    <?php
-                                                        // echo $v=(int)$admin->status;
-                                                        // echo gettype($v);
-                                                        if($admin->status==1)
-                                                        {
-                                                            ?>
-                                                            <a href="javascript:void(0)" class="btn btn-info">Acitve</a>
-                                                        <?php
-                                                        }
-                                                        else
-                                                        {
-                                                            ?>
-                                                            <a href="javascript:void(0)" class="btn btn-danger">Deactive</a>
-                                                            <?php
-                                                        }
-                                                    ?>
-                                                    <a href="javascript:void(0)" class="btn btn-danger">Remove</a>
-                                                    </td>
-                                                </tr>
-                                            <?php
-                                            $i++;
-                                        }
-                                        
-                                      ?>
-                                   </tbody>
-                               </table>
-                           </div>
+    <div class="page-breadcrumb">
+        <div class="row" id="divCreatePlan" >
+            <div class="col-lg-8 offset-lg-2">
+                <div class="card  p-2">
+                    <?php
+                        if($this->session->flashdata('msg'))
+                        {
+                            echo '<div class="alert alert-info">'.$this->session->flashdata('msg').'</div>';
+                        }
+                    ?>
+                   <form action="<?=base_url('index.php/Superadmin/addAdmin')?>" method="post"><br>
+                         <h3 class="text-center">Create Admin</h3>
+                        <hr>
+                        <div class="row">
+                            <div class="col-lg-6">
+                               <label>Admin Name<span class="text-danger">*</span></label>
+                               <Input type="text" name="adminname" placeholder="Enter Admin Name" class="form-control" required>
+                            </div>
+                            <div class="col-lg-6">
+                               <label>Email ID<span class="text-danger">*</span></label>
+                               <Input type="email" name="email" placeholder="Enter Your Email" class="form-control" utocomplete="off" required>
+                            </div>
+                        </div><br>
+                        <div class="row">
+                            <div class="col-lg-6">
+                               <label>Alternate email</label>
+                               <Input type="email" name="altemail" placeholder="Enter Your Alternate Email" class="form-control" utocomplete="off">
+                            </div>
+                            <div class="col-lg-6">
+                               <label>Password<span class="text-danger">*</span></label>
+                               <Input type="Password" name="password" placeholder="Enter Your Password" class="form-control" utocomplete="off" required>
+                            </div>
                         </div>
-                    </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <label>Installation Address<span class="text-danger">*</span></label>
+                                <Input type="text" name="install_add" placeholder="Enter Your Installation Address" class="form-control" utocomplete="off">
+                            </div>
+                            <div class="col-lg-6">
+                                <label>Correspondance Address<span class="text-danger">*</span></label>
+                                <Input type="text" name="corres_add" placeholder="Enter Your Alternate Address" class="form-control" utocomplete="off">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+	                        <div class="col-lg-6">
+	                           <label>Contact No. 1<span class="text-danger">*</span></label>
+	                           <Input type="text" name="cont_no1" placeholder="Enter Contact No. 1" class="form-control" utocomplete="off">
+	                        </div>
+	                        <div class="col-lg-6">
+	                           <label>Contact Person 1<span class="text-danger">*</span></label>
+	                           <Input type="text" name="cont_person1" placeholder="Enter Contact Person 1" class="form-control" utocomplete="off">
+                        	</div>
+                        </div>
+                        <br>
+                        <div class="row">
+	                        <div class="col-lg-6">
+	                           <label>Contact No. 2<span class="text-danger">*</span></label>
+	                           <Input type="text" name="cont_no2" placeholder="Enter Contact No. 2" class="form-control" utocomplete="off">
+	                        </div>
+	                        <div class="col-lg-6">
+	                           <label>Contact Person 2<span class="text-danger">*</span></label>
+	                           <Input type="text" name="cont_person2" placeholder="Enter Contact Person 2" class="form-control" utocomplete="off">
+                        	</div>
+                        </div><br>
+                        <div class="col-lg-12">
+                            <label>Choose Company <span class="text-danger">*</span></label><br>
+                            <div classs="row">
+                            	<select name="company[]" class="form-control" multiple="">
+                                <?php                                         
+                                foreach ($company as $key) 
+                                {
+                                    ?>
+                                    <option name="permission[]" value="<?=$key->id?>"><?=$key->comp_name?></option>
+                                        <!-- <div class="col-lg-6">
+                                            <input type="checkbox" name="permission[]" value="<?=$key->id?>"><span class="mr-4"> <?=$key->comp_name?></span>
+                                        </div> -->
+                                    <?php   
+                                }
+                                ?>
+                            	</select>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="text-center">                           
+                            <input type="submit" value="Submit"  class="btn btn-primary">';
+                        </div>
+                   </form>
                 </div>
-              
-                
-               
             </div>
-            <!-- ============================================================== -->
-            <!-- End Bread crumb and right sidebar toggle -->
-            <!-- ============================================================== -->
-            <!-- ============================================================== -->
-            <!-- Container fluid  -->
-            <!-- ============================================================== -->
-          
-            <!-- ============================================================== -->
-            <!-- End Container fluid  -->
-            <!-- ============================================================== -->
-            <!-- ============================================================== -->
-            <!-- footer -->
-            <!-- ============================================================== -->
-        <!--     <footer class="footer text-center">
-                All Rights Reserved by Nice admin. Designed and Developed by
-                <a href="https://wrappixel.com/">WrapPixel</a>.
-            </footer> -->
-            <!-- ============================================================== -->
-            <!-- End footer -->
-            <!-- ============================================================== -->
-        </div>
+        </div> 
+    </div>
+</div>
         <!-- ============================================================== -->
         <!-- End Page wrapper  -->
         <!-- ============================================================== -->
-    </div>
-    <!-- ============================================================== -->
-    <!-- End Wrapper -->
-    <!-- ============================================================== -->
-    <!-- ============================================================== -->
-    <!-- customizer Panel -->
+</div>
     <!-- ============================================================== -->
     <aside class="customizer">
         <a href="javascript:void(0)" class="service-panel-toggle">
@@ -331,7 +334,6 @@
                         </li>
                     </ul>
                 </div>
-                
             </div>
         </div>
     </aside>
@@ -339,4 +341,4 @@
     <!-- ============================================================== -->
     <!-- All Jquery -->
     <!-- ============================================================== -->
-   
+  
