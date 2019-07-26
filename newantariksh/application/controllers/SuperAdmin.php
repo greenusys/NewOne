@@ -32,14 +32,14 @@ class SuperAdmin extends CI_Controller
         $data['companyList']=$this->db->get('companyList')->result();
         $this->load->view('SuperAdmin/Template/header');
         $this->load->view('SuperAdmin/Home/showCompany',$data);
-        $this->load->view('template/footer');
+        $this->load->view('SuperAdmin/Template/setting_bar');
     }
     public function createAdmin()
     {
         $data['company']=$this->db->get('companyList')->result();
         $this->load->view('SuperAdmin/Template/header');
         $this->load->view('SuperAdmin/Home/createAdmin',$data);
-        $this->load->view('template/footer');
+        $this->load->view('SuperAdmin/Template/setting_bar');
     }
     public function viewPermission()
     {      
@@ -83,9 +83,11 @@ class SuperAdmin extends CI_Controller
     }
     public function addAdmin()
     {
+        // print_r($_POST);
         $company=$this->input->post('company');
         $companyid=implode(',',$company);
-        $data= array( "name" =>$this->input->post('adminname'),"email" =>$this->input->post('email'),"Alt_email" =>$this->input->post('altemail'),"pass" =>$this->input->post('password') ,"comp_id"=>$companyid,"install_address" =>$this->input->post('install_add'),"corres_address" =>$this->input->post('corres_add'),"contact_no1" =>$this->input->post('cont_no1'),"contact_no2" =>$this->input->post('cont_no2'),"contact_person1" =>$this->input->post('cont_person1'),"contact_person2" =>$this->input->post('cont_person2'));
+        $username=$this->input->post('username');
+        $data= array( "name" =>$this->input->post('adminname'),"email" =>$this->input->post('email'),"Alt_email" =>$this->input->post('altemail'),"pass" =>$this->input->post('password') ,"comp_id"=>$companyid,"install_address" =>$this->input->post('install_add'),"corres_address" =>$this->input->post('corres_add'),"contact_no1" =>$this->input->post('cont_no1'),"contact_no2" =>$this->input->post('cont_no2'),"contact_person1" =>$this->input->post('cont_person1'),"contact_person2" =>$this->input->post('cont_person2'),"username"=>$username);
         if($this->Superadmin->insertAdmin($data))
         {
             $this->session->set_flashdata('msg','Added Successfully..');
@@ -145,5 +147,8 @@ class SuperAdmin extends CI_Controller
         $this->load->view('SuperAdmin/Template/setting_bar');
     }
     public function adViewRoles(){}
+    public function removeadmin(){
+        print_r($_POST);
+    }
 }
 ?>
