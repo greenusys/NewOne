@@ -121,7 +121,7 @@ class SuperAdmin extends CI_Controller
         $this->load->view('template/footer');
 
     }
-<<<<<<< HEAD
+
     public function active()
     {
         $data= array("id" =>$this->input->post('id'));
@@ -135,7 +135,7 @@ class SuperAdmin extends CI_Controller
             die(json_encode(array("code"=>0)));
         }
     }
-     public function deactive()
+    public function deactive()
     {
         $data= array("id" =>$this->input->post('id'));
         $status=array( "status" =>0);
@@ -148,9 +148,32 @@ class SuperAdmin extends CI_Controller
             die(json_encode(array("code"=>0)));
         }
     }
-=======
-
->>>>>>> 0d4bf5ace73a17372e076055ad7b8152e431d7b2
+    public function activeAdm()
+    {
+        $data= array("id" =>$this->input->post('id'));
+        $status=array( "status" =>1);
+        if($this->Superadmin->updateAdmin($data,$status))
+        {
+            die(json_encode(array("code"=>1)));
+        }
+        else
+        {
+            die(json_encode(array("code"=>0)));
+        }
+    }
+    public function deactiveAdm()
+    {
+        $data= array("id" =>$this->input->post('id'));
+        $status=array( "status" =>0);
+        if($this->Superadmin->updateAdmin($data,$status))
+        {
+            die(json_encode(array("code"=>1)));
+        }
+        else
+        {
+            die(json_encode(array("code"=>0)));
+        }
+    }
     public function addUserSection()
     {
 

@@ -56,6 +56,18 @@
     			return false;
     		}
     	}
+    	public function updateAdmin($data,$status)
+    	{
+    		$this->db->where($data);
+    		if($this->db->update("admintable",$status))
+    		{
+    			return true;
+    		}
+    		else
+    		{
+    			return false;
+    		}
+    	}
     	public function fetchParticularAdmin($dat){
     		$this->db->where($dat);
 			return $this->db->get('admintable')->result();

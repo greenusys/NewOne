@@ -18,6 +18,7 @@
                                        <th class="text-center font-weight-bold">Alternate Email</th>
                                        <th class="text-center font-weight-bold">Password</th>
                                        <th class="text-center font-weight-bold">Status</th>
+                                       <th class="text-center font-weight-bold">Action</th>
                                        
                                    </thead>
                                    <tbody id="allPlanData">
@@ -32,20 +33,36 @@
                                                     <td class="text-center"><?=$admin->email?></td>
                                                     <td class="text-center"><?=$admin->Alt_email?></td>
                                                     <td class="text-center"><?=$admin->pass?></td>
-                                                    <td class="text-center">
+                                                    
                                                     <?php
+                                                    
+                                                    if($admin->status==1)
+                                                    {
+                                                        ?>
+                                                         <td class="text-center">Active</td>
+                                                    <?php
+                                                    }
+                                                    else
+                                                    {
+                                                        ?>
+                                                         <td class="text-center">Deactive</td>
+                                                        <?php
+                                                    }
+                                                    ?>
+                                                    <td class="text-center">
+                                                       <?php
                                                         // echo $v=(int)$admin->status;
                                                         // echo gettype($v);
-                                                        if($admin->status==1)
+                                                        if($admin->status==0)
                                                         {
                                                             ?>
-                                                            <a href="javascript:void(0)" class="btn btn-primary">Acitve</a>
+                                                            <a href="javascript:void(0)" cm_id="<?=$admin->id?>" class="btn btn-primary activate">Acitvate</a>
                                                         <?php
                                                         }
                                                         else
                                                         {
                                                             ?>
-                                                            <a href="javascript:void(0)" class="btn btn-danger">Deactive</a>
+                                                            <a href="javascript:void(0)" cm_id="<?=$admin->id?>" class="btn btn-danger deactivate">Deactivate</a>
                                                             <?php
                                                         }
                                                     ?>
@@ -67,7 +84,37 @@
                 
                
             </div>
-            
+            <script type="text/javascript">
+                 $(document).on('click','.activate',function()
+                       {
+                            var cm_id=$(this).attr('cm_id');
+                             console.log(cm_id);
+                            $.ajax({
+                                url:"<?=site_url('SuperAdmin/activeAdm')?>",
+                                type:"POST",
+                                data:{id:cm_id},
+                                success: function()
+                                {
+                                   location.reload();
+                                }
+                            })
+                       })
+                       $(document).on('click','.deactivate',function()
+                       {
+                            var cm_id=$(this).attr('cm_id');
+                            console.log(cm_id);
+                            $.ajax({
+                                url:"<?=site_url('SuperAdmin/deactiveAdm')?>",
+                                type:"POST",
+                                data:{id:cm_id},
+                                success: function()
+                                {
+                                   location.reload();
+                                }
+                            })
+
+                       })
+            </script>
             <!-- ============================================================== -->
             <!-- End Bread crumb and right sidebar toggle -->
             <!-- ============================================================== -->
