@@ -14,9 +14,11 @@
                                    <thead class="thead-light">
                                        <th class="text-center font-weight-bold">#</th>
                                        <th class="text-center font-weight-bold">Company Name</th>
-                                       <th class="text-center font-weight-bold">Area</th>
-                                       <th class="text-center font-weight-bold">Address</th>
-                                       <th class="text-center font-weight-bold">Permissions</th>
+                                       <th class="text-center font-weight-bold">Company Username</th>
+                                       <th class="text-center font-weight-bold">Company Email</th>
+                                       <th class="text-center font-weight-bold">Company Permanent Address</th>
+                                       <th class="text-center font-weight-bold">Company Installation Address</th>
+                                       <th class="text-center font-weight-bold">Company Billing Address</th>
                                        <th class="text-center font-weight-bold">Status</th>
                                        
                                    </thead>
@@ -29,10 +31,25 @@
                                                 <tr>
                                                     <td class="text-center"><?=$i?></td>
                                                     <td class="text-center"><?=$comp->comp_name?></td>
-                                                    <td class="text-center"><?=$comp->comp_area?></td>
-                                                    <td class="text-center"><?=$comp->comp_address?></td>
-                                                    <td class="text-center"><?=$comp->permissions?></td>
-                                                    <td class="text-center"><a href="javascript:void(0)" class="btn btn-info">Acitve</a> <a href="javascript:void(0)" class="btn btn-danger">Deactive</a></td>
+                                                    <td class="text-center"><?=$comp->user_name?></td>
+                                                    <td class="text-center"><?=$comp->comp_email?></td>
+                                                    <td class="text-center"><?=$comp->comp_permanent?></td>
+                                                    <td class="text-center"><?=$comp->comp_install?></td>
+                                                    <td class="text-center"><?=$comp->comp_billing?></td>
+                                                    <td class="text-center">
+                                                        <?php
+                                                        if($comp->status==1)
+                                                        {
+                                                        ?>
+                                                            <a href="javascript:void(0)" class="btn btn-info" u_id='<?=$comp->id?>' id="active">Active</a> 
+                                                        <?php
+                                                        }
+                                                        else
+                                                        {?>
+                                                            <a href="javascript:void(0)" class="btn btn-danger">Deactive</a>
+                                                        <?php
+                                                        }
+                                                        ?></td>
                                                 </tr>
                                             <?php
                                             $i++;
@@ -321,4 +338,22 @@
     <!-- ============================================================== -->
     <!-- All Jquery -->
     <!-- ============================================================== -->
-   
+   <script type="text/javascript">
+       $(document).on('click','#active',function()
+       {
+            var u_id=$(this).attr('u_id');
+            $.ajax({
+                url:"booking_data.php",
+                type:"post",
+                data:{id:u_id},
+                processData:false,
+                contentType:false,
+                success: function()
+                {
+                    window.location.href="booknow.php";
+                }
+            })
+
+
+       })
+   </script>

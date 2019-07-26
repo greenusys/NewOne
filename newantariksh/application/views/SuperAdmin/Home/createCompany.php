@@ -179,7 +179,7 @@ a:hover {
 		                        <div class="col-md-6 stoppaddignleft">
 		                            <div class="form-group field-subscriber-address required">
 										<label class="control-label" for="subscriber-address">Installation Address</label>
-										<textarea id="subscriber-address" class="form-control rounded" name="install_address" maxlength="500" aria-required="true" > </textarea>
+										<textarea id="company-address" class="form-control rounded" name="install_address" maxlength="500" aria-required="true" > </textarea>
 
 										<div class="help-block"></div>
 										</div>                       
@@ -187,7 +187,7 @@ a:hover {
 		                        <div class="col-md-6 stoppaddignleft stoppaddignright">
 		                            <div class="form-group field-subscriber-billing_address">
 										<label class="control-label" for="subscriber-billing_address">Billing Address</label>
-										<textarea id="subscriber-billing_address" class="form-control rounded" name="bill_address" maxlength="500"></textarea>
+										<textarea id="company-billing_address" class="form-control rounded" name="bill_address" maxlength="500"></textarea>
 
 										<div class="help-block"></div>
 										</div>               
@@ -224,14 +224,14 @@ a:hover {
 		                        <div class="col-md-6 stoppaddignleft">
 		                            <div class="form-group field-subscriber-address">
 										<label class="control-label" for="contactno1">Contact No 1</label>
-										<Input type="text" name="contactno1" placeholder="Enter Your Contact No 1" class="form-control" required>
+										<Input type="text" name="contactno1" placeholder="Enter Your Contact No 1" class="form-control">
 										<div class="help-block"></div>
 										</div>                       
 									</div>
 		                        <div class="col-md-6 stoppaddignleft stoppaddignright">
 		                            <div class="form-group field-subscriber-billing_address">
 										<label class="control-label" for="contactperson1">Contact Person 1</label>
-										<Input type="text" name="contactperson1" placeholder="Enter Your Contact Person 1" class="form-control" required>
+										<Input type="text" name="contactperson1" placeholder="Enter Your Contact Person 1" class="form-control">
 
 
 										<div class="help-block"></div>
@@ -242,7 +242,7 @@ a:hover {
 		                        <div class="col-md-6 stoppaddignleft">
 		                            <div class="form-group field-subscriber-address">
 										<label class="control-label" for="contactno2">Contact No 2</label>
-										<Input type="text" name="contactno2" placeholder="Enter Your Contact No 2" class="form-control" required>
+										<Input type="text" name="contactno2" placeholder="Enter Your Contact No 2" class="form-control" >
 
 
 										<div class="help-block"></div>
@@ -251,7 +251,7 @@ a:hover {
 		                        <div class="col-md-6 stoppaddignleft stoppaddignright">
 		                            <div class="form-group field-subscriber-billing_address">
 										<label class="control-label" for="contactperson2">Contact Person 2</label>
-										<Input type="text" name="contactperson2" placeholder="Enter Your Contact Person 2" class="form-control" required>
+										<Input type="text" name="contactperson2" placeholder="Enter Your Contact Person 2" class="form-control" >
 										<div class="help-block"></div>
 										</div>               
 					            </div>
@@ -260,14 +260,14 @@ a:hover {
 		                        <div class="col-md-6 stoppaddignleft">
 		                            <div class="form-group field-subscriber-address">
 										<label class="control-label" for="contactno3">Contact No 3</label>
-										<Input type="text" name="contactno3" placeholder="Enter Your Contact No 3" class="form-control" required>
+										<Input type="text" name="contactno3" placeholder="Enter Your Contact No 3" class="form-control" >
 										<div class="help-block"></div>
 									</div>                       
 									</div>
 		                        <div class="col-md-6 stoppaddignleft stoppaddignright">
 		                            <div class="form-group field-subscriber-billing_address">
 										<label class="control-label" for="contactperson3">Contact Person 3</label>
-										<Input type="text" name="contactperson3" placeholder="Enter Your Contact Person 3" class="form-control" required>
+										<Input type="text" name="contactperson3" placeholder="Enter Your Contact Person 3" class="form-control">
 										<div class="help-block"></div>
 										</div>               
 					            </div>
@@ -286,6 +286,9 @@ a:hover {
 
 
       	</div><br>
+	        <div class="text-center">                           
+	            <input type="submit" value="Submit"  class="btn btn-primary">';
+	        </div>
   		</form>
 
                 <div style="clear:both"></div>

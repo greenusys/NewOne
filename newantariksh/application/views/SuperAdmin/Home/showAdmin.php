@@ -34,17 +34,18 @@
                                                     <td class="text-center"><?=$admin->pass?></td>
                                                     <td class="text-center">
                                                     <?php
-                                                    $s=$admin->status;
-                                                    if($s==1)
-                                                    {?>
-                                                        <a href="javascript:void(0)" class="btn btn-info">Acitve</a>
-                                                    <?php}
+                                                    if($admin->status==1)
+                                                    {
+                                                    ?>
+                                                        <a href="javascript:void(0)" class="btn btn-info">Acitve</a> 
+                                                    <?php
+                                                    }
                                                     else
                                                     {?>
                                                         <a href="javascript:void(0)" class="btn btn-danger">Deactive</a>
-                                                   <?php }
-                                                    ?>
-                                                    </td>
+                                                    <?php
+                                                    }
+                                                    ?></td>
                                                 </tr>
                                             <?php
                                             $i++;
