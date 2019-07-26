@@ -57,6 +57,10 @@
     			return false;
     		}
     	}
+    	public function fetchParticularAdmin($dat){
+    		$this->db->where($dat);
+			return $this->db->get('admintable')->result();
+    	}
 	}	
 ?>
 

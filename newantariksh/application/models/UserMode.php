@@ -6,10 +6,11 @@
 		{
 			return $this->db->get($this->tableName)->result();
 		}
-		// function fetchParticularUser($data)
-		// {
-			
-		// }
+		function fetchParticularUser($data)
+		{
+            $this->db->where($data);
+			return $this->db->get($this->tableName)->result();
+		}
 		// function deleteUser($data)
 		// {
 
