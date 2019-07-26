@@ -1,4 +1,40 @@
-
+<?php
+// print_r($userData);
+	if(count($userData)>0)
+	{
+		// print_r($userData);
+		$name= $userData[0]->name;
+		$username= $userData[0]->username;
+		$email= $userData[0]->email;
+		$alt_email= $userData[0]->Alt_email;
+		$pass= $userData[0]->pass;
+		$install_address= $userData[0]->install_address;
+		$corres_address= $userData[0]->corres_address;
+		$contact_no1= $userData[0]->contact_no1;
+		$contact_no2= $userData[0]->contact_no2;
+		$contact_person1= $userData[0]->contact_person1;
+		$contact_person2= $userData[0]->contact_person2;
+		$comp_id= $userData[0]->comp_id;
+		$temp=1;
+		
+	}
+	else
+	{
+		$name="";
+		$username="";
+		$email="";
+		$alt_email="";
+		$pass="";
+		$install_address="";
+		$corres_address="";
+		$contact_no1="";
+		$contact_no2="";
+		$contact_person1="";
+		$contact_person2="";
+		$comp_id="";
+		$temp=0;
+	}
+?>
 <style>
     form div.required label.control-label:after {
     content: " * ";
@@ -82,14 +118,14 @@ a:hover {
 			                        <div class="col-md-6 stoppaddignleft">
 			                            <div class="form-group field-subscriber-first_name required">
 				                         	<label class="control-label" for="companyname">Admin Name</label>
-	                                       <Input type="text" name="adminname" placeholder="Enter Admin Name" class="form-control" required>
+	                                       <Input type="text" name="adminname" placeholder="Enter Admin Name" class="form-control"value="<?=$name?>" required>
 				                            <div class="help-block"></div>
 				                            </div>                      
 		                        	</div>
 			                        <div class="col-md-6 stoppaddignleft stoppaddignright">
 			                            <div class="form-group field-subscriber-last_name required">
 			                            <label class="control-label">Username</label>
-	                                   	<Input type="text" name="username" placeholder="Enter Your username" class="form-control" required>
+	                                   	<Input type="text" name="username" value="<?=$username?>" placeholder="Enter Your username" class="form-control" required>
 
 			                            <div class="help-block"></div>
 			                            </div>                        
@@ -99,14 +135,14 @@ a:hover {
 			                    	<div class="col-md-6 stoppaddignleft">
 			                            <div class="form-group field-subscriber-aadhar_number required">
 											  <label>Password<span class="text-danger">*</span></label>
-		                                       <Input type="Password" name="password" placeholder="Enter Your Password" class="form-control" required>
+		                                       <Input type="Password" name="password" value="<?=$pass?>" placeholder="Enter Your Password" class="form-control" required>
 											<div class="help-block"></div>
 										</div>                       
 									</div>
 			                        <div class="col-md-6 stoppaddignleft stoppaddignright">
 			                             <div class="form-group field-subscriber-pan_number required">
 											  <label class="control-label" for="subscriber-email_id">Email ID</label>
-										<input type="email" id="subscriber-email_id" placeholder="Example: John@Carter.com" class="form-control" name="email" aria-required="true">
+										<input type="email" id="subscriber-email_id" placeholder="Example: John@Carter.com" class="form-control" name="email" value="<?=$email?>"aria-required="true">
 										<div class="help-block"></div>
 										</div>                      
 									</div>
@@ -114,8 +150,8 @@ a:hover {
 			                   <div class="row">
 			                   		<div class="col-md-6 stoppaddignleft stoppaddignright">
 			                            <div class="form-group field-subscriber-pan_number required">
-											<label class="control-label" for="subscriber-email_id">Email ID</label>
-											<input type="email" id="subscriber-email_id" placeholder="Example: John@Carter.com" class="form-control" name="altemail" aria-required="true">
+											<label class="control-label" for="subscriber-email_id">Alternate Email ID</label>
+											<input type="email" id="subscriber-email_id" placeholder="Example: John@Carter.com" class="form-control" value="<?=$alt_email?>" name="altemail" aria-required="true">
 											<div class="help-block"></div>
 										</div>                      
 									</div>
@@ -144,14 +180,14 @@ a:hover {
 			                    	<div class="col-md-6 stoppaddignleft">
 			                            <div class="form-group field-subscriber-aadhar_number required">
 											  <label>Contact Person 1<span class="text-danger">*</span></label>
-		                                       <Input type="text" name="cont_person1" placeholder="First Contact Person Name" class="form-control" required>
+		                                       <Input type="text" name="cont_person1" value="<?=$contact_person1?>" placeholder="First Contact Person Name" class="form-control" required>
 											<div class="help-block"></div>
 										</div>                       
 									</div>
 			                        <div class="col-md-6 stoppaddignleft stoppaddignright">
 			                             <div class="form-group field-subscriber-pan_number required">
 											  <label class="control-label" for="subscriber-email_id">Contact No. 1</label>
-										<input type="text" id="subscriber-email_id" placeholder="First Contact Person Number" class="form-control" name="cont_no1" aria-required="true">
+										<input type="text" id="subscriber-email_id" placeholder="First Contact Person Number"value="<?=$contact_no1?>" class="form-control" name="cont_no1" aria-required="true">
 										<div class="help-block"></div>
 										</div>                      
 									</div>
@@ -160,14 +196,14 @@ a:hover {
 			                    	<div class="col-md-6 stoppaddignleft">
 			                            <div class="form-group field-subscriber-aadhar_number required">
 											  <label>Contact Person 2<span class="text-danger">*</span></label>
-		                                       <Input type="text" name="cont_person2" placeholder="Second Contact Person Name" class="form-control" required>
+		                                       <Input type="text" name="cont_person2" placeholder="Second Contact Person Name" value="<?=$contact_person2?>" class="form-control" required>
 											<div class="help-block"></div>
 										</div>                       
 									</div>
 			                        <div class="col-md-6 stoppaddignleft stoppaddignright">
 			                             <div class="form-group field-subscriber-pan_number required">
 											  <label class="control-label" for="subscriber-email_id">Contact No. 2</label>
-										<input type="text" id="subscriber-email_id" placeholder="Second Contact Person Number" class="form-control" name="cont_no2" aria-required="true">
+										<input type="text" id="subscriber-email_id" placeholder="Second Contact Person Number" value="<?=$contact_no2?>" class="form-control" name="cont_no2" aria-required="true">
 										<div class="help-block"></div>
 										</div>                      
 									</div>
@@ -197,7 +233,7 @@ a:hover {
 		                        <div class="col-md-6 stoppaddignleft">
 		                            <div class="form-group field-subscriber-address required">
 										<label class="control-label" for="subscriber-address">Installation Address</label>
-										<textarea id="subscriber-address" class="form-control rounded" name="install_add" maxlength="500" aria-required="true" > </textarea>
+										<textarea id="subscriber-address" class="form-control rounded" name="install_add" maxlength="500" value="<?=$install_address?>" aria-required="true" > </textarea>
 
 										<div class="help-block"></div>
 										</div>                       
@@ -205,7 +241,7 @@ a:hover {
 		                        <div class="col-md-6 stoppaddignleft stoppaddignright">
 		                            <div class="form-group field-subscriber-billing_address required">
 										<label class="control-label" for="subscriber-billing_address">Correspondance Address</label>
-										<textarea id="subscriber-billing_address" class="form-control rounded" name="corres_add" maxlength="500"></textarea>
+										<textarea id="subscriber-billing_address" value="<?=$corres_address?>" class="form-control rounded" name="corres_add" maxlength="500"></textarea>
 
 										<div class="help-block"></div>
 										</div>               
@@ -232,17 +268,7 @@ a:hover {
 		                        </div>
 		                    </div>
 		                    <br>
-		                    <div class="row stoppaddignleft stoppaddignright">
-		                        <div class="col-md-12 stoppaddignleft">
-		                        	<hr>
-		                            <div class="form-group field-subscriber-permanent_address">
-										<input type="submit" value="Add Admin" class="btn btn-success">
-										<input type="submit" value="Update Admin" class="btn btn-info">
 
-										<div class="help-block"></div>
-									</div>                        
-								</div>
-		                    </div>
                         </div>
                       </div>
                   </div>
@@ -256,7 +282,28 @@ a:hover {
         </div>
 
 
-      	</div><br>
+      	</div>
+      	     <div class="row">
+		                        <div class="col-md-12 stoppaddignleft">
+		                        	<hr>
+		                            <div class="form-group field-subscriber-permanent_address text-center">
+		                            	<?php
+		                            		if ($temp==1) {
+		                            			echo '<input type="submit" value="Update Admin" class="btn btn-info">';
+		                            		}
+		                            		else
+		                            		{
+		                            			echo '<input type="submit" value="Add Admin" class="btn btn-success">';
+		                            		}
+		                            	?>
+										
+										
+
+										<div class="help-block"></div>
+									</div>                        
+								</div>
+		                    </div>
+		                    <br>
   		</form>
 
                 <div style="clear:both"></div>
