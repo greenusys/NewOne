@@ -39,7 +39,7 @@
                                                         if($admin->status==1)
                                                         {
                                                             ?>
-                                                            <a href="javascript:void(0)" class="btn btn-info">Acitve</a>
+                                                            <a href="javascript:void(0)" class="btn btn-primary">Acitve</a>
                                                         <?php
                                                         }
                                                         else
@@ -49,7 +49,7 @@
                                                             <?php
                                                         }
                                                     ?>
-                                                    <a href="javascript:void(0)" class="btn btn-danger">Remove</a>
+                                                    <a href="javascript:void(0)" class="btn btn-info updAdmin" adminId="<?=$admin->id?> " >Updates</a>
                                                     </td>
                                                 </tr>
                                             <?php
@@ -67,6 +67,21 @@
                 
                
             </div>
+            <script type="text/javascript">
+                $(document).on('click','.updAdmin', function(){
+                    var adminId=$(this).attr('adminId');
+                    //alert("Admin Id: "+adminId);
+                    $.ajax({
+                        url:"<?=site_url('SuperAdmin/addAdmin')?>",
+                        type:"POST",
+                        data:{id:adminId},
+                        success:function(response)
+                                {
+                                    alert(Response);    
+                                }
+                    });
+                });
+            </script>
             <!-- ============================================================== -->
             <!-- End Bread crumb and right sidebar toggle -->
             <!-- ============================================================== -->
