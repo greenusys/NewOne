@@ -77,7 +77,7 @@
                         data:{id:adminId},
                         success:function(response)
                                 {
-                                    alert(Response);    
+                                    alert("==>"+Response);    
                                 }
                     });
                 });
