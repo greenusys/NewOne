@@ -117,17 +117,28 @@ class SuperAdmin extends CI_Controller
     }
     public function active()
     {
-        $data= array("id" =>$this->input->post('u_id'));
+        $data= array("id" =>$this->input->post('id'));
         $status=array( "status" =>1);
         if($this->Superadmin->updateCompany($data,$status))
         {
-            $this->session->set_flashdata('msg','Added Successfully..');
-            redirect(base_url('index.php/Superadmin/showCompany'));
+            die(json_encode(array("code"=>1)));
         }
         else
         {
-            $this->session->set_flashdata('msg','Error Occured');
-            redirect(base_url('index.php/Superadmin/showCompany'));
+            die(json_encode(array("code"=>0)));
+        }
+    }
+     public function deactive()
+    {
+        $data= array("id" =>$this->input->post('id'));
+        $status=array( "status" =>0);
+        if($this->Superadmin->updateCompany($data,$status))
+        {
+            die(json_encode(array("code"=>1)));
+        }
+        else
+        {
+            die(json_encode(array("code"=>0)));
         }
     }
     public function addUserSection()

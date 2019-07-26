@@ -44,11 +44,10 @@
 			}
             
     	}
-    	public function updateCompany($data)
+    	public function updateCompany($data,$status)
     	{
     		$this->db->where($data);
-    		$status=array( "status" =>1);
-    		if($this->db->update("companylist",$data))
+    		if($this->db->update("companylist",$status))
     		{
     			return true;
     		}

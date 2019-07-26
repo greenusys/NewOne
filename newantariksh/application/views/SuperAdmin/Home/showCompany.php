@@ -20,7 +20,7 @@
                                        <th class="text-center font-weight-bold">Company Installation Address</th>
                                        <th class="text-center font-weight-bold">Company Billing Address</th>
                                        <th class="text-center font-weight-bold">Status</th>
-                                       
+                                       <th class="text-center font-weight-bold">Action</th>
                                    </thead>
                                    <tbody id="allPlanData">
                                       <?php
@@ -36,20 +36,40 @@
                                                     <td class="text-center"><?=$comp->comp_permanent?></td>
                                                     <td class="text-center"><?=$comp->comp_install?></td>
                                                     <td class="text-center"><?=$comp->comp_billing?></td>
-                                                    <td class="text-center">
-                                                        <?php
-                                                        if($comp->status==1)
-                                                        {
+                                                    <?php
+                                                    
+                                                    if($comp->status==1)
+                                                    {
                                                         ?>
-                                                            <a href="javascript:void(0)" class="btn btn-info" u_id='<?=$comp->id?>' id="active">Active</a> 
+                                                         <td class="text-center">Active</td>
+                                                    <?php
+                                                    }
+                                                    else
+                                                    {
+                                                        ?>
+                                                         <td class="text-center">Deactive</td>
+                                                        <?php
+                                                    }
+                                                    ?>
+                                                    <td class="text-center">
+                                                       <?php
+                                                        // echo $v=(int)$admin->status;
+                                                        // echo gettype($v);
+                                                        if($comp->status==0)
+                                                        {
+                                                            ?>
+                                                            <a href="javascript:void(0)" cm_id="<?=$comp->id?>" class="btn btn-primary activate">Acitvate</a>
                                                         <?php
                                                         }
                                                         else
-                                                        {?>
-                                                            <a href="javascript:void(0)" class="btn btn-danger">Deactive</a>
-                                                        <?php
+                                                        {
+                                                            ?>
+                                                            <a href="javascript:void(0)" cm_id="<?=$comp->id?>" class="btn btn-danger deactivate">Deactivate</a>
+                                                            <?php
                                                         }
-                                                        ?></td>
+                                                    ?>
+                                                    <a href="javascript:void(0)" class="btn btn-info upcompany" cm_id="<?=$comp->id?>" >Update</a>
+                                                    </td>
                                                 </tr>
                                             <?php
                                             $i++;
@@ -339,21 +359,48 @@
     <!-- All Jquery -->
     <!-- ============================================================== -->
    <script type="text/javascript">
-       $(document).on('click','#active',function()
+       $(document).on('click','.activate',function()
        {
-            var u_id=$(this).attr('u_id');
+            var cm_id=$(this).attr('cm_id');
+             console.log(cm_id);
             $.ajax({
-                url:"booking_data.php",
-                type:"post",
-                data:{id:u_id},
-                processData:false,
-                contentType:false,
+                url:"<?=site_url('SuperAdmin/active')?>",
+                type:"POST",
+                data:{id:cm_id},
                 success: function()
                 {
-                    window.location.href="booknow.php";
+                   location.reload();
+                }
+            })
+       })
+       $(document).on('click','.deactivate',function()
+       {
+            var cm_id=$(this).attr('cm_id');
+            console.log(cm_id);
+            $.ajax({
+                url:"<?=site_url('SuperAdmin/deactive')?>",
+                type:"POST",
+                data:{id:cm_id},
+                success: function()
+                {
+                   location.reload();
                 }
             })
 
+       })
+       $(document).on('click','.update',function()
+       {
+            var cm_id=$(this).attr('cm_id');
+            console.log(cm_id);
+            $.ajax({
+                url:"<?=site_url('SuperAdmin/update')?>.cm_id",
+                type:"POST",
+                data:{id:cm_id},
+                success: function()
+                {
+                   location.reload();
+                }
+            })
 
        })
    </script>
